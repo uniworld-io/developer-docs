@@ -1,0 +1,74 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+/* your custom css */
+
+.button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: .5rem 20px;
+}
+
+.button:hover {
+    color: red;
+}
+
+.nav-footer .sitemap .nav-home {
+    width: auto;
+    height: auto;
+    flex: 1;
+}
+
+.nav-footer .sitemap .nav-home img {
+    max-height: 180px;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.nav-footer .copyright {
+    border-top: 1px rgba(255, 255, 255, .1) solid;
+    padding-top: 15px;
+}
+
+
+/* .docsNavContainer {
+    background-color: #000;
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, .6);
+    color: #fafafa;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: calc(100vh - 80px);
+    padding: 0 30px;
+}
+
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+    color: #fff;
+}
+
+.toc .toggleNav ul li a {
+    color: #d4d4d4;
+}
+
+.toc .toggleNav ul li a:hover,
+.toc .toggleNav ul li.navListItemActive a {
+    color: red;
+} */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1023px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1500px) {}
