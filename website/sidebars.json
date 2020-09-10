@@ -1,10 +1,13 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Learn About UniChain": ["welcome", "ecosystem"],
+    "UniChain Protocol": ["overview", "keyconcept"],
+    "Get Started": ["doc3"],
+    "UNW and Token":["unw", "unichaintoken"],
+    "Smart Contract": ["yourfirstsmartcontract", "deploysmartcontract"],
+    "Community": ["unichainopensource", "contributionguide", "reportingvulnerabilities"]
   },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "apis": {
+    "Core API": ["fullNodeAPI", "unichainJS"]
   }
 }

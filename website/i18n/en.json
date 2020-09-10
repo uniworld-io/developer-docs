@@ -5,6 +5,14 @@
     "previous": "Previous",
     "tagline": "API documents",
     "docs": {
+      "contributionguide": {
+        "title": "Contribution Guide",
+        "sidebar_label": "Contribution Guide"
+      },
+      "deploysmartcontract": {
+        "title": "Deploy smart contract",
+        "sidebar_label": "Deploy smart contract"
+      },
       "doc1": {
         "title": "Latin-ish",
         "sidebar_label": "Example Page"
@@ -13,25 +21,64 @@
         "title": "document number 2"
       },
       "doc3": {
-        "title": "This is document number 3"
+        "title": "Sub menu"
       },
-      "doc4": {
-        "title": "Other Document"
+      "ecosystem": {
+        "title": "UniWorld Ecosystem",
+        "sidebar_label": "The ecosystem"
       },
-      "doc5": {
-        "title": "Fifth Document"
+      "fullNodeAPI": {
+        "title": "Full Node API"
+      },
+      "keyconcept": {
+        "title": "Key Concept",
+        "sidebar_label": "Key Concept"
+      },
+      "overview": {
+        "title": "Protocol Overview",
+        "sidebar_label": "Overview"
+      },
+      "reportingvulnerabilities": {
+        "title": "Reporting Vulnerabilities",
+        "sidebar_label": "Reporting Vulnerabilities"
+      },
+      "unichainJS": {
+        "title": "UniChain-JS API"
+      },
+      "unichainopensource": {
+        "title": "UniChain Open Source",
+        "sidebar_label": "UniChain Open Source"
+      },
+      "unichaintoken": {
+        "title": "UniChain token",
+        "sidebar_label": "UniChain Token"
+      },
+      "unw": {
+        "title": "Uni Coin - UNW",
+        "sidebar_label": "UNW"
+      },
+      "welcome": {
+        "title": "Welcome to UniChain",
+        "sidebar_label": "Welcome"
+      },
+      "yourfirstsmartcontract": {
+        "title": "Your first smart contract",
+        "sidebar_label": "Your first smart contract"
       }
     },
     "links": {
       "Docs": "Docs",
       "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "Help": "Help"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "Learn About UniChain": "Learn About UniChain",
+      "UniChain Protocol": "UniChain Protocol",
+      "Get Started": "Get Started",
+      "UNW and Token": "UNW and Token",
+      "Smart Contract": "Smart Contract",
+      "Community": "Community",
+      "Core API": "Core API"
     }
   },
   "pages-strings": {
