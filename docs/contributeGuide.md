@@ -1,5 +1,5 @@
 ---
-id: contributionguide
+id: contributionGuide
 title: Contribution Guide
 sidebar_label: Contribution Guide
 ---

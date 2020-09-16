@@ -1,5 +1,5 @@
 ---
-id: unichaintoken
+id: unichainToken
 title: UniChain token
 sidebar_label: UniChain Token
 ---
@@ -32,7 +32,7 @@ Tokens are simply digital assets that are being built on top of the blockchain b
 - Navigate to *Token tool* in the left pannel and fill all the token information
 - Confirm and enter your password to broacast the transaction
 
-![issue token on Unitools](./static/img/oss_logo.png) "Create token on UniTools"
+![issue token on Unitools](../img/create_token.png) 
 
 *Please note that the transaction fee for issuing token is 500 UNW*
 

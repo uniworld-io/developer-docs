@@ -1,11 +1,11 @@
 {
   "docs": {
     "Learn About UniChain": ["welcome", "ecosystem"],
-    "UniChain Protocol": ["overview", "keyconcept"],
-    "Get Started": ["doc3"],
-    "UNW and Token":["unw", "unichaintoken"],
-    "Smart Contract": ["yourfirstsmartcontract", "deploysmartcontract"],
-    "Community": ["unichainopensource", "contributionguide", "reportingvulnerabilities"]
+    "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "consensusAlgorithm", "witnessNode"],
+    "Get Started": ["getStarted", "runLocalNetwork"],
+    "UNW and Token":["unw", "unichainToken"],
+    "Smart Contract": ["yourFirstSmartContract", "deploySmartContract"],
+    "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"]
   },
   "apis": {
     "Core API": ["fullNodeAPI", "unichainJS"]

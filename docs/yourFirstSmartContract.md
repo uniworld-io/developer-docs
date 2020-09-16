@@ -1,5 +1,5 @@
 ---
-id: yourfirstsmartcontract
+id: yourFirstSmartContract
 title: Your first smart contract
 sidebar_label: Your first smart contract
 ---
