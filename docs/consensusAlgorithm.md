@@ -1,6 +1,6 @@
 ---
-id: accountAndAddress
-title: Account and Address
-sidebar_label: Account and Address
+id: consensusAlgorithm
+title: Consensus Algorithm
+sidebar_label: Consensus Algorithm
 ---
 

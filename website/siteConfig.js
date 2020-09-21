@@ -20,7 +20,7 @@ const users = [{
 
 const siteConfig = {
     title: 'Uni Docs', // Title for your website.
-    tagline: 'API documents',
+    tagline: 'Documents for developers',
     url: 'https:uniworld.io', // Your website URL
     baseUrl: '/', // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:

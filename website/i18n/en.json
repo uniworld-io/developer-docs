@@ -5,11 +5,19 @@
     "previous": "Previous",
     "tagline": "API documents",
     "docs": {
-      "contributionguide": {
+      "accountAndAddress": {
+        "title": "Account and Address",
+        "sidebar_label": "Account and Address"
+      },
+      "consensusAlgorithm": {
+        "title": "Consensus Algorithm",
+        "sidebar_label": "Consensus Algorithm"
+      },
+      "contributionGuide": {
         "title": "Contribution Guide",
         "sidebar_label": "Contribution Guide"
       },
-      "deploysmartcontract": {
+      "deploySmartContract": {
         "title": "Deploy smart contract",
         "sidebar_label": "Deploy smart contract"
       },
@@ -20,9 +28,6 @@
       "doc2": {
         "title": "document number 2"
       },
-      "doc3": {
-        "title": "Sub menu"
-      },
       "ecosystem": {
         "title": "UniWorld Ecosystem",
         "sidebar_label": "The ecosystem"
@@ -30,26 +35,36 @@
       "fullNodeAPI": {
         "title": "Full Node API"
       },
-      "keyconcept": {
+      "getStarted": {
+        "title": "Setup environment"
+      },
+      "keyConcept": {
         "title": "Key Concept",
         "sidebar_label": "Key Concept"
       },
       "overview": {
-        "title": "Protocol Overview",
+        "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "reportingvulnerabilities": {
+      "reportingVulnerabilities": {
         "title": "Reporting Vulnerabilities",
         "sidebar_label": "Reporting Vulnerabilities"
+      },
+      "rewardMechanism": {
+        "title": "Reward Mechanism",
+        "sidebar_label": "Reward Mechanism"
+      },
+      "runLocalNetwork": {
+        "title": "Run Local Network"
       },
       "unichainJS": {
         "title": "UniChain-JS API"
       },
-      "unichainopensource": {
+      "unichainOpensource": {
         "title": "UniChain Open Source",
         "sidebar_label": "UniChain Open Source"
       },
-      "unichaintoken": {
+      "unichainToken": {
         "title": "UniChain token",
         "sidebar_label": "UniChain Token"
       },
@@ -61,7 +76,11 @@
         "title": "Welcome to UniChain",
         "sidebar_label": "Welcome"
       },
-      "yourfirstsmartcontract": {
+      "witnessNode": {
+        "title": "Witness Node",
+        "sidebar_label": "Witness Node"
+      },
+      "yourFirstSmartContract": {
         "title": "Your first smart contract",
         "sidebar_label": "Your first smart contract"
       }
