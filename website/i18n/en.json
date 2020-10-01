@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "API documents",
+    "tagline": "Documents for developers",
     "docs": {
       "accountAndAddress": {
         "title": "Account and Address",
@@ -16,6 +16,10 @@
       "contributionGuide": {
         "title": "Contribution Guide",
         "sidebar_label": "Contribution Guide"
+      },
+      "demoCalculation": {
+        "title": "Demo Calculation",
+        "sidebar_label": "Demo Calculation"
       },
       "deploySmartContract": {
         "title": "Deploy smart contract",
@@ -97,6 +101,7 @@
       "UNW and Token": "UNW and Token",
       "Smart Contract": "Smart Contract",
       "Community": "Community",
+      "Demo": "Demo",
       "Core API": "Core API"
     }
   },

@@ -63,6 +63,19 @@
     color: red;
 } */
 
+.nav-footer {
+    background: #000;
+}
+
+.docsNavContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.docsNavContainer::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
 
 @media only screen and (min-width: 1024px) {}
