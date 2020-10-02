@@ -81,7 +81,18 @@
 }
 
 .uni-header {
-    padding: 80px 0;
+    padding: 100px 0;
+    background-image: url(/img/banner-1.png);
+    background-position: left bottom;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.uni-header .projectTitle {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .unw-news,
@@ -235,6 +246,15 @@
     text-transform: uppercase;
 }
 
+@media(min-width:768px) {
+    .uni-header .button {
+        padding: 12px 50px 15px 50px;
+        font-size: 20px;
+        line-height: 1;
+        margin: 0 5px;
+    }
+}
+
 @media (max-width: 1024px) {
     .x-row {
         grid-template-columns: repeat(12, minmax(48px, 1fr));
@@ -250,6 +270,13 @@
     }
     .cards-3 .x-card {
         grid-column: 2/span 4;
+    }
+    .uni-header .button {
+        font-size: 20px;
+        margin: 0 5px 15px 5px;
+    }
+    .uni-header {
+        padding: 50px 0;
     }
 }
 
