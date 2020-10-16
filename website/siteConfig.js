@@ -38,7 +38,7 @@ const siteConfig = {
     headerLinks: [
         { doc: 'welcome', label: 'Docs' },
         { doc: 'fullNodeAPI', label: 'API' },
-        { page: 'help', label: 'Help' }
+        { doc: 'help', label: 'Help' }
     ],
 
     // If you have users set above, you add it here:

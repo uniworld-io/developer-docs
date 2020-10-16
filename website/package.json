@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.4"
+  },
+  "dependencies": {
+    "@uniworld/unichain-js": "^0.1.4"
   }
 }

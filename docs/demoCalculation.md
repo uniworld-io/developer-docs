@@ -31,3 +31,13 @@ sidebar_label: Demo Calculation
     </div>
 </div>
 <div>Total: <b id="Payment"></b></div>
+<script src="../js/UnichainJS.js"></script>
+<script type="text/javascript">
+console.log('hehehe ===========')
+console.log('hello')
+//const Unichain = require('@uniworld/unichain-js');
+console.log(UnichainJS.address.fromPrivateKey('4ac7b76aad6cca988a9b11b17dee08bda9aaf1e8ef65fb719a19eee5c3ad0d02'))
+</script>
+
+## Testing
+### Testing 1
