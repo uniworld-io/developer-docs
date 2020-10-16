@@ -64,7 +64,6 @@ class HomeSplash extends React.Component {
           <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
           <div className="wrapper">
             <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
-            <p>Docusaurus makes it easy to maintain Open Source documentation websites.</p>
             <PromoSection>
               <Button href={docUrl('welcome.html')}>Knowledge</Button>
               <Button href={docUrl('fullNodeAPI.html')}>API Docs</Button>
@@ -119,7 +118,7 @@ class HomeSplash extends React.Component {
         </div>
         <div className="unw-join-us">
           <div className="wrapper">
-            <h2>Join Optimizely's Global Community of Developers</h2>
+            <h2>Join UniChain's Global Community of Developers</h2>
             <p>Connect with other developers about feature flags, progressive delivery, and experimentation.</p>
             <div>
               <a href="#">Join the Discussion</a>
