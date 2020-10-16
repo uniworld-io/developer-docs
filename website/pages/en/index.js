@@ -68,49 +68,49 @@ class HomeSplash extends React.Component {
             <PromoSection>
               <Button href={docUrl('welcome.html')}>Knowledge</Button>
               <Button href={docUrl('fullNodeAPI.html')}>API Docs</Button>
-              <Button href="help.html">Need Help</Button>
+              <Button href={docUrl('help.html')}>Need Help</Button>
             </PromoSection>
           </div>
         </div>
         <div className="unw-news">
           <div className="wrapper">
-            <h2>Latest Developer Blog Posts</h2>
+            <h2>Popular eveloper Blog Posts</h2>
             <div className="x-row cards-3">
-              <a href="#" target="_blank" className="x-card ">
+              <a href="https://medium.com/uniworld-io/unichain-for-decentralized-finance-dc016ca50937" target="_blank" className="x-card ">
                   <figure className="x-card-top">
-                      <div style={{ backgroundImage: `url(/img/news-1.png)` }}></div>
+                      <div style={{ backgroundImage: `url(/img/unichain-defi.png)` }}></div>
                   </figure>
                   <div className="x-card-body">
-                      <h5>Feature Flags in Node Express</h5>
-                      <p>Learn how to get the value of powerful feature flags by rolling out a feature customer-by-customer in Express using Optimizely Rollouts.</p>
+                      <h5>UniChain for Decentralized Finance</h5>
+                      <p>Decentralized Finance or Defi is a movement of the financial sector that leverage decentralized technologies, particularly blockchain networks</p>
                       <div className="btn-text-arrow-black">
-                          <span>Create feature flags</span>
+                          <span>Read more</span>
                       </div>
                   </div>
               </a>
 
-              <a href="#" target="_blank" className="x-card ">
+              <a href="https://medium.com/uniworld-io/unichains-dpos-hotstuff-consensus-algorithm-9b165100f9e4" target="_blank" className="x-card ">
                   <figure className="x-card-top">
-                      <div style={{ backgroundImage: `url(/img/news-2.png)` }}></div>
+                      <div style={{ backgroundImage: `url(/img/unichain-consensus.png)` }}></div>
                   </figure>
                   <div className="x-card-body">
-                      <h5>Integrate Full Stack APIs into your development workflow</h5>
-                      <p>Key use cases for using our new Full Stack APIs to automate your experimentation and rollout strategy</p>
+                      <h5>UniChain’s DPOS-Hotstuff consensus algorithm</h5>
+                      <p>DPOS is a success consensus algorithm in many famous blockchain platforms including EOS, Bitshare, Lisk … while Hotstuff is recently used in Facebook Libra project</p>
                       <div className="btn-text-arrow-black">
                           <span>Read More</span>
                       </div>
                   </div>
               </a>
 
-              <a href="#" target="_blank" className="x-card ">
+              <a href="https://medium.com/uniworld-io/how-unime-implement-the-secured-end-to-end-chat-app-703305916ad7" target="_blank" className="x-card ">
                   <figure className="x-card-top">
-                      <div style={{ backgroundImage: `url(/img/news-3.png)` }}></div>
+                      <div style={{ backgroundImage: `url(/img/unime-architect.png)` }}></div>
                   </figure>
                   <div className="x-card-body">
-                      <h5>Create Feature Flags in React</h5>
-                      <p>There's a safer way to rollout features to your customers. Learn how to use a feature flag system to ensure you are deploying high quality code.</p>
+                      <h5>How UniMe implement the secured end-to-end chat app</h5>
+                      <p>UniMe is a universal secured chat app and AI Chatbot/Blockchain hub. This is one of the Uniworld’s applications that provides an easy way for end-users to interact with Uniworld’s ecosystem</p>
                       <div className="btn-text-arrow-black">
-                          <span>Get Started</span>
+                          <span>Read more</span>
                       </div>
                   </div>
               </a>
@@ -126,7 +126,7 @@ class HomeSplash extends React.Component {
             </div>
           </div>
         </div>
-        <div className="unw-partner">
+        {/* <div className="unw-partner">
           <div className="wrapper">
             <h2>Who is Using UniChain?</h2>
             <p>UniChain is building websites for these projects...</p>
@@ -153,7 +153,7 @@ class HomeSplash extends React.Component {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </SplashContainer>
     );
   }
