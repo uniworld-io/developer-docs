@@ -36,11 +36,19 @@
         "title": "UniWorld Ecosystem",
         "sidebar_label": "The ecosystem"
       },
+      "example": {
+        "title": "Example & Demo",
+        "sidebar_label": "Example & Demo"
+      },
       "fullNodeAPI": {
         "title": "Full Node API"
       },
       "getStarted": {
         "title": "Setup environment"
+      },
+      "help": {
+        "title": "Help",
+        "sidebar_label": "Help"
       },
       "keyConcept": {
         "title": "Key Concept",
@@ -101,7 +109,7 @@
       "UNW and Token": "UNW and Token",
       "Smart Contract": "Smart Contract",
       "Community": "Community",
-      "Demo": "Demo",
+      "Example & Demo": "Example & Demo",
       "Core API": "Core API"
     }
   },

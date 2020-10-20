@@ -12,6 +12,11 @@ or click on this [link](https://github.com/uniworld-io/unichain-core/releases/do
 
 Please note that the binary above is build for Linux (Ubuntu) only. If you have another different OS, please rebuild the source code.
 
+### Download Relay node
+wget https://github.com/uniworld-io/unichain-core/releases/download/v1.0.1/relay-node.jar
+
+or click on this [link](https://github.com/uniworld-io/unichain-core/releases/download/v1.0.1/relay-node.jar)
+
 ### Build UniChain Node
 #### Prepare dependencies
 - JDK 1.8 (JDK 1.9+ are not supported yet)
@@ -43,6 +48,6 @@ java -jar unichain-core.jar -c ./your_localtion/of_config_file.conf
 
 If you are witness, run unichain node with --witness and -p options (-p: witness private key)
 ```
-java -jar unichain-core --witness -p your_witness_private_key
-java -jar unichain-core --witness -p f06f6fbea136162c1bfac04869ff94331ca2a9861f737e4b05b56527b0b8bf46
+java -jar unichain-core.jar --witness -p your_witness_private_key
+java -jar unichain-core.jar --witness -p f06f6fbea136162c1bfac04869ff94331ca2a9861f737e4b05b56527b0b8bf46
 ```
