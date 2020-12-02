@@ -6,7 +6,8 @@
         "UNW and Token": ["unw", "unichainToken"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract"],
         "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"],
-        "Example & Demo": ["example"]
+        "Example & Demo": ["example"],
+        "Archive Package": ["utils"]
     },
     "apis": {
         "Core API": ["fullNodeAPI", "unichainJS"]
