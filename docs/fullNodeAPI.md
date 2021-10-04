@@ -312,6 +312,23 @@ $ curl -X POST  http://{host}/wallet/proposalcreate -d
     ]
 }'
 ```
+### Create hardfork proposal
+- Path: wallet/proposalcreate
+- Method: POST
+- Description: Create the hardfork proposal, only witness node has the permission to perform this operation. Hardfork key is 34 and value is supported block version, now support upto block version 2
+- Params and data example:
+```
+$ curl -X POST  http://{host}/wallet/proposalcreate -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "parameters": [
+        {
+            "key": 34,
+            "value": 2
+        }
+    ]
+}'
+```
 ### Get the proposal list
 - Path: wallet/listproposals
 - Method: POST
@@ -630,6 +647,7 @@ $ curl -X POST  http://{host}/wallet/broadcasthex -d
  $ curl -X GET  http://{host}/walletsolidity/getnowblock
 
 ```
+
 ### Get block by number
  - Path: walletsolidity/getblockbynum
  - Method: POST
@@ -674,5 +692,239 @@ $ curl -X POST  http://{host}/wallet/broadcasthex -d
 $ curl -X POST  http://{host}/walletsolidity/getblockbylatestnum -d
 '{
     "num": 10
+}'
+ ```
+
+
+## Future transfer
+### Create future transfer
+ - Path: wallet/createfuturetransaction
+ - Method: POST
+ - Description: create future transfer transaction
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/createfuturetransaction -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "to_address": "44c88aa676111b8169bd000d092548a9ac4390af41",
+    "amount": 1000,
+    "expire_time": 1633361417000
+}'
+ ```
+
+### Withdraw expired future deals 
+ - Path: wallet/withdrawfuturetransaction
+ - Method: POST
+ - Description: create future transfer transaction
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/withdrawfuturetransaction -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3"
+}'
+ ```
+
+### List future deals on full node
+ - Path: wallet/getfuturetransfer
+ - Method: POST
+ - Description: create future transfer transaction
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/getfuturetransfer -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "page_size": 10,
+    "page_index": 0
+}'
+ ```
+
+### List future deals solidity node
+ - Path: walletsolidity/getfuturetransfer
+ - Method: POST
+ - Description: create future transfer transaction
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/walletsolidity/getfuturetransfer -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "page_size": 10,
+    "page_index": 0
+}'
+ ```
+
+
+## Token v2 (token economy)
+### Create new token v2
+ - Path: wallet/createtoken
+ - Method: POST
+ - Description: create token v2
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/createtoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "name":"PWR",
+    "abbr":"pwr",
+    "max_supply": 1000000000,
+    "total_supply": 500000000,
+    "start_time": 1633361417000,
+    "end_time": 1791127817000,
+    "description":"Token for Solar Power Solution Inc",
+    "url":"http://solarpower.com",
+    "fee": 10,
+    "extra_fee_rate": 1,
+    "fee_pool": 1000000,
+    "lot": 10000,
+    "fee": 10
+}'
+ ```
+
+### Contribute UNW to token v2 pool fee
+ - Path: wallet/contributetokenfee
+ - Method: POST
+ - Description: contrinute UNW to token fee pool
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/contributetokenfee -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name":"PWR",
+    "amount": 1000000
+}'
+ ```
+
+### Update token v2 params
+ - Path: wallet/updatetokenparams
+ - Method: POST
+ - Description: update token params
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/updatetokenparams -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "amount": "600000000", //token transfer fee
+    "extra_fee_rate": 2,
+    "lot": 200,
+    "url": "http://solarpower2.com",
+    "description":"Solar Power Solution Inc",
+    "total_supply":"Solar Power Solution Inc",
+    "fee_pool": 10000000,
+    "total_supply": 10000000
+}'
+ ```
+
+### Mint token v2
+ - Path: wallet/minetoken
+ - Method: POST
+ - Description: mint to increasse more token to curculation
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/minetoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "amount": 100000000
+}'
+ ```
+
+### Burn token v2
+ - Path: wallet/burntoken
+ - Method: POST
+ - Description: burn to decrease token from curculation
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/burntoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "amount": 100000000
+}'
+ ```
+
+### Transfer token v2
+ - Path: wallet/transfertoken
+ - Method: POST
+ - Description: create future transfer transaction
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/transfertoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "to_address": "44c88aa676111b8169bd000d092548a9ac4390af41",
+    "token_name": "PWR",
+    "amount": 1000000,
+    "available_time": 1791127817000
+}'
+ ```
+
+### Withdraw expired future token deals
+ - Path: wallet/withdrawfuturetoken
+ - Method: POST
+ - Description: withdraw expired future token deals
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/withdrawfuturetoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR"
+}'
+ ```
+
+### List token v2 on full node
+ - Path: wallet/gettokenpool
+ - Method: POST
+ - Description: List all created token v2 on full node
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/gettokenpool -d
+'{
+    "token_name": "PWR",
+    "page_size": 10,
+    "page_index": 0
+}'
+ ```
+
+### List token v2 on solidity node
+ - Path: walletsolidity/gettokenpool
+ - Method: POST
+ - Description: List all created token v2 on solidity node
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/walletsolidity/gettokenpool -d
+'{
+    "token_name": "PWR",
+    "page_size": 10,
+    "page_index": 0
+}'
+ ```
+
+### List all future token transfer deals on full node
+ - Path: wallet/getfuturetoken
+ - Method: POST
+ - Description: List all future token v2 transfer deals
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/getfuturetoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "page_size": 10,
+    "page_index": 0
+}'
+ ```
+
+### List all future token transfer deals on solidity node
+ - Path: walletsolidity/getfuturetoken
+ - Method: POST
+ - Description: List all future token v2 transfer deals
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "page_size": 10,
+    "page_index": 0
 }'
  ```
