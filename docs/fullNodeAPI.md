@@ -647,6 +647,7 @@ $ curl -X POST  http://{host}/wallet/broadcasthex -d
  $ curl -X GET  http://{host}/walletsolidity/getnowblock
 
 ```
+
 ### Get block by number
  - Path: walletsolidity/getblockbynum
  - Method: POST
@@ -751,6 +752,7 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetransfer -d
 }'
  ```
 
+
 ## Token v2 (token economy)
 ### Create new token v2
  - Path: wallet/createtoken
@@ -776,6 +778,7 @@ $ curl -X POST  http://{host}/wallet/createtoken -d
     "fee": 10
 }'
  ```
+
 ### Contribute UNW to token v2 pool fee
  - Path: wallet/contributetokenfee
  - Method: POST
@@ -811,7 +814,6 @@ $ curl -X POST  http://{host}/wallet/updatetokenparams -d
 }'
  ```
 
-
 ### Mint token v2
  - Path: wallet/minetoken
  - Method: POST
@@ -826,7 +828,6 @@ $ curl -X POST  http://{host}/wallet/minetoken -d
 }'
  ```
 
-
 ### Burn token v2
  - Path: wallet/burntoken
  - Method: POST
@@ -840,7 +841,6 @@ $ curl -X POST  http://{host}/wallet/burntoken -d
     "amount": 100000000
 }'
  ```
-
 
 ### Transfer token v2
  - Path: wallet/transfertoken
@@ -858,11 +858,10 @@ $ curl -X POST  http://{host}/wallet/transfertoken -d
 }'
  ```
 
-
 ### Withdraw expired future token deals
  - Path: wallet/withdrawfuturetoken
  - Method: POST
- - Description: withdraw future token deals that's expired
+ - Description: withdraw expired future token deals
  - Params and data example: 
  ```
 $ curl -X POST  http://{host}/wallet/withdrawfuturetoken -d
@@ -875,7 +874,7 @@ $ curl -X POST  http://{host}/wallet/withdrawfuturetoken -d
 ### List token v2 on full node
  - Path: wallet/gettokenpool
  - Method: POST
- - Description: List all created token v2 
+ - Description: List all created token v2 on full node
  - Params and data example: 
  ```
 $ curl -X POST  http://{host}/wallet/gettokenpool -d
@@ -889,7 +888,7 @@ $ curl -X POST  http://{host}/wallet/gettokenpool -d
 ### List token v2 on solidity node
  - Path: walletsolidity/gettokenpool
  - Method: POST
- - Description: List all created token v2 
+ - Description: List all created token v2 on solidity node
  - Params and data example: 
  ```
 $ curl -X POST  http://{host}/walletsolidity/gettokenpool -d
@@ -900,8 +899,7 @@ $ curl -X POST  http://{host}/walletsolidity/gettokenpool -d
 }'
  ```
 
-
-### List all future token transfer deals
+### List all future token transfer deals on full node
  - Path: wallet/getfuturetoken
  - Method: POST
  - Description: List all future token v2 transfer deals
@@ -915,8 +913,6 @@ $ curl -X POST  http://{host}/wallet/getfuturetoken -d
     "page_index": 0
 }'
  ```
-
-
 
 ### List all future token transfer deals on solidity node
  - Path: walletsolidity/getfuturetoken
