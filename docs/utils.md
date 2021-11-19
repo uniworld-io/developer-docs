@@ -10,7 +10,7 @@ sidebar_label: Util packages
 
 ```wget https://developers.unichain.world/archives/jdk-8u202-linux-x64.tar.gz```
 
-    _Please note that, the above package is just for testing. Please go to [ocracle page](https://www.oracle.com) register, accept the terms and conditions and then download the right package according to your OS architecture_
+_Please note that, the above package is just for testing. Please go to [ocracle page](https://www.oracle.com) register, accept the terms and conditions and then download the right package according to your OS architecture_
 
 
 *Version 2*
