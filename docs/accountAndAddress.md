@@ -37,12 +37,64 @@ The *result* returned from the *sign* function contains the value of *{s, r, v}*
 ### Generate address 
 The utility functions below will generate the address from your private key. You can either choose the random private key or input your own. __Please note that these functions are executed from the client side, No one can access the private key except you__. 
 <div>
-    <input id="privateKey" style="width:95%;height:30px;margin-top:10px"></input>
-    <input id="address" style="width:95%;height:30px;margin-top:10px"></input>
-    <input type="button" style="width:20%;margin-left:40%;height:30px;margin-top:10px" onClick="generateAddress()">Generate Address</input>
+    <input id="privateKey" style="width:95%;height:30px;margin-top:10px" placeholder=" private key. If empty, the random private key will be generated"></input>
+    <input id="address" style="width:95%;height:30px;margin-top:10px" placeholder=" generated address" disabled></input>
+    <input type="button" style="width:20%;margin-left:40%;height:30px;margin-top:10px" onClick="generateAddress()" value="Generate Address"></input>
+</div>
+
+### Convert address to hex and vice versa 
+<div>
+    <input id="sourceAddress" style="width:95%;height:30px;margin-top:10px" placeholder="Enter your address (Hex or Base58 format)"></input>
+    <input id="destinationAddress" style="width:95%;height:30px;margin-top:10px" placeholder=" Converted address" disabled></input>
+    <input type="button" style="width:20%;margin-left:40%;height:30px;margin-top:10px" onClick="convertAddress()" value="Convert Address"></input>
 </div>
 <script src="../js/UnichainJS.js"></script>
 <script type="text/javascript">
-//const Unichain = require('@uniworld/unichain-js');
-console.log(UnichainJS.address.fromPrivateKey('4ac7b76aad6cca988a9b11b17dee08bda9aaf1e8ef65fb719a19eee5c3ad0d02'))
+    function randomeHex () {
+        const hexChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+        const min = 0, max = hexChar.length - 1
+        let key = ''
+        for (let i = 0; i < 64; ++i) {
+            let pos = Math.floor(Math.random() * (max - min) + min)
+            key += hexChar[pos]
+        }
+        return key
+    }
+    function checkHex (hexString) {
+        const re = /[0-9A-Fa-f]{64}/g
+        return re.test(hexString)
+    }
+    function generateAddress() {
+        let privateKey = document.getElementById("privateKey").value 
+        if (privateKey) {
+            if (privateKey.length != 64 || !checkHex(privateKey)) {
+                document.getElementById("address").value = 'Invalid private key'
+                return
+            }
+        }
+        if (!privateKey) {
+            privateKey = randomeHex()
+            document.getElementById("privateKey").value = privateKey
+        }
+        document.getElementById("address").value = UnichainJS.address.fromPrivateKey(privateKey)
+    }
+    function convertAddress() {
+        const  sourceAddress = document.getElementById("sourceAddress").value
+        if (!sourceAddress) {
+            document.getElementById("destinationAddress").value = 'Invali Address. Please input base58 or hex address'
+            return
+        }
+        const reHex = /^44[0-9A-Fa-f]{40}/g
+        const reBase58 = /^U[0-9A-Za-z]{33}/g
+        if (sourceAddress.length == 42 && reHex.test(sourceAddress)) {
+            document.getElementById("destinationAddress").value = UnichainJS.address.fromHex(sourceAddress)
+            return
+        }
+        if (sourceAddress.length == 34 && reBase58.test(sourceAddress)) {
+            document.getElementById("destinationAddress").value = UnichainJS.address.toHex(sourceAddress)
+            return
+        }
+        document.getElementById("destinationAddress").value = 'Invali Address. Please input base58 or hex address'
+    }
+
 </script>
