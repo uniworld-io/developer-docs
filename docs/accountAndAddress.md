@@ -81,7 +81,7 @@ The utility functions below will generate the address from your private key. You
     function convertAddress() {
         const  sourceAddress = document.getElementById("sourceAddress").value
         if (!sourceAddress) {
-            document.getElementById("destinationAddress").value = 'Invali Address. Please input base58 or hex address'
+            document.getElementById("destinationAddress").value = 'Invalid Address. Please input base58 or hex address'
             return
         }
         const reHex = /^44[0-9A-Fa-f]{40}/g
@@ -94,7 +94,7 @@ The utility functions below will generate the address from your private key. You
             document.getElementById("destinationAddress").value = UnichainJS.address.toHex(sourceAddress)
             return
         }
-        document.getElementById("destinationAddress").value = 'Invali Address. Please input base58 or hex address'
+        document.getElementById("destinationAddress").value = 'Invalid Address. Please input base58 or hex address'
     }
 
 </script>

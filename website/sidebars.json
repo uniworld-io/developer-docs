@@ -4,7 +4,7 @@
         "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "witnessNode", "reward"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "UNW and Token": ["unw", "unichainToken"],
-        "Smart Contract": ["yourFirstSmartContract", "deploySmartContract"],
+        "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
         "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"],
         "Example & Demo": ["example"],
         "Archive Package": ["utils"]
