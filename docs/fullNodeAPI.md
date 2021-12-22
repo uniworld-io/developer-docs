@@ -753,8 +753,8 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetransfer -d
  ```
 
 
-## Token v2 (token economy)
-### Create new token v2
+## URC30 Token
+### Create new URC30 token
  - Path: wallet/createtoken
  - Method: POST
  - Description: create token v2
@@ -775,11 +775,13 @@ $ curl -X POST  http://{host}/wallet/createtoken -d
     "extra_fee_rate": 1,
     "fee_pool": 1000000,
     "lot": 10000,
-    "fee": 10
+    "fee": 10,
+    "exch_unx_num": 10,
+    "exch_num": 1000
 }'
  ```
 
-### Contribute UNW to token v2 pool fee
+### Contribute UNW to URC30 token pool fee
  - Path: wallet/contributetokenfee
  - Method: POST
  - Description: contrinute UNW to token fee pool
@@ -793,7 +795,7 @@ $ curl -X POST  http://{host}/wallet/contributetokenfee -d
 }'
  ```
 
-### Update token v2 params
+### Update URC30 token params
  - Path: wallet/updatetokenparams
  - Method: POST
  - Description: update token params
@@ -810,11 +812,13 @@ $ curl -X POST  http://{host}/wallet/updatetokenparams -d
     "description":"Solar Power Solution Inc",
     "total_supply":"Solar Power Solution Inc",
     "fee_pool": 10000000,
-    "total_supply": 10000000
+    "total_supply": 10000000,
+    "exch_unx_num": 20,
+    "exch_num": 1000
 }'
  ```
 
-### Mint token v2
+### Mint URC30 token
  - Path: wallet/minetoken
  - Method: POST
  - Description: mint to increasse more token to curculation
@@ -828,7 +832,7 @@ $ curl -X POST  http://{host}/wallet/minetoken -d
 }'
  ```
 
-### Burn token v2
+### Burn URC30 token
  - Path: wallet/burntoken
  - Method: POST
  - Description: burn to decrease token from curculation
@@ -842,7 +846,7 @@ $ curl -X POST  http://{host}/wallet/burntoken -d
 }'
  ```
 
-### Transfer token v2
+### Transfer URC30 token
  - Path: wallet/transfertoken
  - Method: POST
  - Description: create future transfer transaction
@@ -858,7 +862,7 @@ $ curl -X POST  http://{host}/wallet/transfertoken -d
 }'
  ```
 
-### Withdraw expired future token deals
+### Withdraw expired future URC30 token deals
  - Path: wallet/withdrawfuturetoken
  - Method: POST
  - Description: withdraw expired future token deals
@@ -871,7 +875,36 @@ $ curl -X POST  http://{host}/wallet/withdrawfuturetoken -d
 }'
  ```
 
-### List token v2 on full node
+ ### Update URC30 token's owner
+ - Path: wallet/transfertokenowner
+ - Method: POST
+ - Description: transfer URC30 token's ownership to another account
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/transfertokenowner -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "to_address": "44c88aa676111b8169bd000d092548a9ac4390af41",
+    "token_name": "PWR"
+}'
+ ```
+
+
+ ### Exchange UNW to URC30 token
+ - Path: wallet/exchangetoken
+ - Method: POST
+ - Description: exchange UNW to URC30 token
+ - Params and data example: 
+ ```
+$ curl -X POST  http://{host}/wallet/exchangetoken -d
+'{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "token_name": "PWR",
+    "amount": 1000000
+}'
+ ```
+
+### List URC30 token on full node
  - Path: wallet/gettokenpool
  - Method: POST
  - Description: List all created token v2 on full node
@@ -884,8 +917,39 @@ $ curl -X POST  http://{host}/wallet/gettokenpool -d
     "page_index": 0
 }'
  ```
+ - Output example:
+ ```
+ {
+  "total": 3,
+  "page_index": 0,
+  "page_size": 1,
+  "tokens": [
+    {
+      "fee_pool": 109996058,
+      "total_supply": 550000000,
+      "fee": 10,
+      "end_time": "2041-12-15 19:29:42",
+      "description": "desc",
+      "owner_address": "44e4257594e51b856d87428771a1a9ccdcab8bf5cb",
+      "url": "url",
+      "burned": 50000000,
+      "lot": 100,
+      "start_time": "2021-12-20 19:29:42",
+      "name": "SSI",
+      "max_supply": 1000000000,
+      "extra_fee_rate": 1,
+      "latest_operation_time": "2021-12-21 08:46:39",
+      "abbr": "ssi",
+      "fee_pool_origin": 100000000,
+      "exch_unx_num": 1,
+      "exch_num": 10,
+      "critical_update_time": "2021-12-21 08:46:39" //exist in block version >= 3
+    }
+  ]
+}
+```
 
-### List token v2 on solidity node
+### List URC30 token on solidity node
  - Path: walletsolidity/gettokenpool
  - Method: POST
  - Description: List all created token v2 on solidity node
@@ -898,8 +962,39 @@ $ curl -X POST  http://{host}/walletsolidity/gettokenpool -d
     "page_index": 0
 }'
  ```
+- Output example:
+ ```
+ {
+  "total": 3,
+  "page_index": 0,
+  "page_size": 1,
+  "tokens": [
+    {
+      "fee_pool": 109996058,
+      "total_supply": 550000000,
+      "fee": 10,
+      "end_time": "2041-12-15 19:29:42",
+      "description": "desc",
+      "owner_address": "44e4257594e51b856d87428771a1a9ccdcab8bf5cb",
+      "url": "url",
+      "burned": 50000000,
+      "lot": 100,
+      "start_time": "2021-12-20 19:29:42",
+      "name": "SSI",
+      "max_supply": 1000000000,
+      "extra_fee_rate": 1,
+      "latest_operation_time": "2021-12-21 08:46:39",
+      "abbr": "ssi",
+      "fee_pool_origin": 100000000,
+      "exch_unx_num": 1,
+      "exch_num": 10,
+      "critical_update_time": "2021-12-21 08:46:39" //exist in block version >= 3
+    }
+  ]
+}
+```
 
-### List all future token transfer deals on full node
+### List all future URC30 token transfer deals on full node
  - Path: wallet/getfuturetoken
  - Method: POST
  - Description: List all future token v2 transfer deals
@@ -914,7 +1009,7 @@ $ curl -X POST  http://{host}/wallet/getfuturetoken -d
 }'
  ```
 
-### List all future token transfer deals on solidity node
+### List all future URC30 token transfer deals on solidity node
  - Path: walletsolidity/getfuturetoken
  - Method: POST
  - Description: List all future token v2 transfer deals
@@ -928,3 +1023,5 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
     "page_index": 0
 }'
  ```
+
+###
