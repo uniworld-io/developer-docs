@@ -30,7 +30,32 @@ $ curl -X POST  http://{host}/wallet/createtransaction -d
 '{
     "value": "1700cc7ebfca2f7c54b4320b01ff9489416e38a12cc4147cd4848b196e49dbce"
 }'
- ``` 
+ ```
+
+ ### Get Transaction info by ID
+ - Path: /walletsolidity/gettransactioninfobyid
+ - Method: POST
+ - Description: Get transaction info by transaction ID
+ - Params and data example: 
+ ```
+    curl -X POST  http://{host}/walletsolidity/gettransactioninfobyid -d
+'{
+    "value": "1700cc7ebfca2f7c54b4320b01ff9489416e38a12cc4147cd4848b196e49dbce"
+}'
+ ```
+
+  ### Get Transaction info by ID
+ - Path: /wallet/gettransactioninfobyid
+ - Method: POST
+ - Description: Get transaction info by transaction ID
+ - Params and data example: 
+ ```
+    curl -X POST  http://{host}/wallet/gettransactioninfobyid -d
+'{
+    "value": "1700cc7ebfca2f7c54b4320b01ff9489416e38a12cc4147cd4848b196e49dbce"
+}'
+ ```
+
 ### Get Transaction count in block
 - Path: /walletsolidity/gettransactioncountbyblocknum
 - Method: POST
