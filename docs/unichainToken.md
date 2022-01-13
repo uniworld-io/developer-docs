@@ -60,7 +60,7 @@ The basic functions of URC-30 token as below:
 - Transfer ownership
 
 ### Issue URC-30 token on UniWallet
-Users can issue URC-30 tokens by using wallet-cli, APIs, SDK ... but the simplest way is to use UniWallet. 
+Users can issue URC-30 tokens by using wallet-cli, APIs, SDK ... but the simplest way is to use [UniWallet](https://uniwallet.world). 
 
 <ul>
   <li>Step 1: Go to UniWallet website</li>
