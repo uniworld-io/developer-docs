@@ -15,3 +15,5 @@ The smallest unit of UNW is Ginza. 1 UNW = 1.000.000 Ginza
 ## How to obtain UNW
 
 Because UNW cannot be mined. You can obtain UNW from UniWorld airdrop/bouty campaigns, swap from other coins/token or buy from exchanges. You also join the network and get the rewards (become a witness or vote for witness)
+
+Go to [Coinmarketcap](https://coinmarketcap.com/currencies/uniworld/markets/) for more information about exchanges listing UNW
