@@ -1048,5 +1048,99 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
     "page_index": 0
 }'
  ```
-
 ###
+## NFT
+### Create new nft template
+- Path: /wallet/createnfttemplate
+- Method: POST
+- Description: Create new nft template
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/createnfttemplate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "symbol":  "ABC",
+    "name": "TESTABC",
+    "total_supply": 10,
+    "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37"
+}'
+ ```
+
+### Create new nft token
+- Path: /wallet/createtoken
+- Method: POST
+- Description: Create new nft token
+- Params and data example:
+ ```
+curl --location --request GET 'http://18.136.105.112:6636/wallet/createtoken' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "name": "TokenTest",
+    "abbr": "",
+    "max_supply": 100,
+    "total_supply": 100,
+    "start_time": null,
+    "end_time": null,
+    "description": "test",
+    "url": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
+    "fee": 10,
+    "extra_fee_rate": 10,
+    "fee_pool": 10,
+    "burned": null,
+    "latest_operation_time": null,
+    "lot": null,
+    "fee_pool_origin": 10,
+    "exch_unx_num": null,
+    "exch_num": null,
+    "critical_update_time": null,
+    "create_acc_fee": 10
+}'
+ ```
+
+### Get Nft template
+- Path: /wallet/getnfttemplate
+- Method: GET
+- Description: Get nft template by symbol
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/wallet/getnfttemplate?symbol=VIETANH'
+ ```
+### Get Nft token
+- Path: /wallet/getnfttoken
+- Method: GET
+- Description: Get nft token by symbol and id
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/wallet/getnfttoken?symbol=VIETANH&id=1'
+ ```
+
+### Get Nft balance
+- Path: /wallet/getnftbalanceOf
+- Method: GET
+- Description: Get count token by owner
+- Params and data example:
+ ```
+ curl --location --request GET 'http://{host}/wallet/getnftbalanceOf?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
+ ```
+
+### List Nft template
+- Path: /wallet/getnftbalanceOf
+- Method: GET
+- Description: Get page nft template by owner address
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
+ ```
+
+### List Nft token
+- Path: /wallet/listnfttoken
+- Method: GET
+- Description: Get page nft token 
+- Params and data example:
+ ```
+curl --location --request GET 'http://18.136.105.112:6636/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
+ ```
+
+
