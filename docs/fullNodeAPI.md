@@ -1056,7 +1056,7 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
 - Description: Create new nft template
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/createnfttemplate' \
+curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "symbol":  "ABC",
@@ -1073,7 +1073,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/createnfttempl
 - Description: Create new nft token
 - Params and data example:
  ```
-curl --location --request GET 'http://18.136.105.112:6636/wallet/createtoken' \
+curl --location --request GET 'http://{host}/wallet/createtoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1140,7 +1140,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_addres
 - Description: Get page nft token 
 - Params and data example:
  ```
-curl --location --request GET 'http://18.136.105.112:6636/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
+curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
  ```
 
 
