@@ -1073,7 +1073,7 @@ curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
 - Description: Create new nft token
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/createtoken' \
+curl --location --request POST 'http://{host}/wallet/createtoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
