@@ -1126,7 +1126,7 @@ curl --location --request GET 'http://{host}/wallet/getnfttoken?symbol=VIETANH&i
  ```
 
 ### List Nft template
-- Path: /wallet/getnftbalanceOf
+- Path: /wallet/listnfttemplate
 - Method: GET
 - Description: Get page nft template by owner address
 - Params and data example:
