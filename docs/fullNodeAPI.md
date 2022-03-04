@@ -1090,7 +1090,7 @@ curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
 - Description: remove minter of nft template
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/removenftminter' \
+curl --location --request POST 'http://{host}/wallet/removenftminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1105,7 +1105,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/removenftminte
 - Description: add minter for nft template
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/addnftminter' \
+curl --location --request POST 'http://{host}/wallet/addnftminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
@@ -1120,7 +1120,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/addnftminter' 
 - Description: renounce nft minter
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/renouncenftminter' \
+curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1134,7 +1134,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/renouncenftmin
 - Description: burn nft token
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/burnnfttoken' \
+curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1149,7 +1149,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/burnnfttoken' 
 - Description: Approve a nft token of owner to other address
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoken' \
+curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1166,7 +1166,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoke
 - Description: Approve all nft token of owner to other address
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoken' \
+curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
@@ -1181,7 +1181,7 @@ curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoke
 - Description: Transfer a token of owner to other address
 - Params and data example:
  ```
-curl --location --request POST 'http://18.136.105.112:6636/wallet/transfernfttoken' \
+curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
