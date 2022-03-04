@@ -1067,35 +1067,20 @@ curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
 }'
  ```
 
-### Create new nft token
-- Path: /wallet/createtoken
+### Create Mint Nft token
+- Path: /wallet/mintnfttoken
 - Method: POST
-- Description: Create new nft token
+- Description: create new mint nft token
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/createtoken' \
+curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "name": "TokenTest",
-    "abbr": "",
-    "max_supply": 100,
-    "total_supply": 100,
-    "start_time": null,
-    "end_time": null,
-    "description": "test",
-    "url": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
-    "fee": 10,
-    "extra_fee_rate": 10,
-    "fee_pool": 10,
-    "burned": null,
-    "latest_operation_time": null,
-    "lot": null,
-    "fee_pool_origin": 10,
-    "exch_unx_num": null,
-    "exch_num": null,
-    "critical_update_time": null,
-    "create_acc_fee": 10
+    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "uri": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
+    "symbol": "VIETANH",
+    "metadata": ""
 }'
  ```
 
@@ -1143,21 +1128,5 @@ curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_addres
 curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
  ```
 
-### Create Mint Nft token
-- Path: /wallet/mintnfttoken
-- Method: POST
-- Description: create new mint nft token
-- Params and data example:
- ```
-curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "uri": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
-    "symbol": "VIETANH",
-    "metadata": ""
-}'
- ```
 
 
