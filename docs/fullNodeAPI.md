@@ -1067,7 +1067,7 @@ curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
 }'
  ```
 
-### Create Mint Nft token
+### Create new mint nft token
 - Path: /wallet/mintnfttoken
 - Method: POST
 - Description: create new mint nft token
@@ -1081,6 +1081,113 @@ curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
     "uri": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
     "symbol": "VIETANH",
     "metadata": ""
+}'
+ ```
+
+### Remove mft minter contract
+- Path: /wallet/removenftminter
+- Method: POST
+- Description: remove minter of nft template
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/removenftminter' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "nft_template": "VIETANH"
+}'
+ ```
+
+
+### Add minter nft contract
+- Path: /wallet/addnftminter
+- Method: POST
+- Description: add minter for nft template
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/addnftminter' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "nft_template": "VIETANH"
+}'
+ ```
+
+### Renounce nft minter
+- Path: /wallet/renouncenftminter
+- Method: POST
+- Description: renounce nft minter
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/renouncenftminter' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "nft_template": "VIETANH"
+}'
+ ```
+
+### Burn nft token
+- Path: /wallet/burnnfttoken
+- Method: POST
+- Description: burn nft token
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/burnnfttoken' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "nft_template": "VIETANH",
+    "token_id": 1
+}'
+ ```
+
+### Approve nft token
+- Path: /wallet/approvenfttoken
+- Method: POST
+- Description: Approve a nft token of owner to other address
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoken' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "approve": true,
+    "nft_template": "VIETANH",
+    "token_id": 1
+}'
+ ```
+
+### Approve all nft token
+- Path: /wallet/approveforallnfttoken
+- Method: POST
+- Description: Approve all nft token of owner to other address
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/approvenfttoken' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "approve": true
+}'
+ ```
+
+### Transfer nft token
+- Path: /wallet/transfernfttoken
+- Method: POST
+- Description: Transfer a token of owner to other address
+- Params and data example:
+ ```
+curl --location --request POST 'http://18.136.105.112:6636/wallet/transfernfttoken' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
+    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "nft_template": "VIETANH",
+    "token_id": 1
 }'
  ```
 
