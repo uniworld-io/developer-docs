@@ -1235,5 +1235,23 @@ curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_addres
 curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
  ```
 
+### List approve nft token
+- Path: /wallet/listnfttokenapprove
+- Method: GET
+- Description: Show info total of token and owner approve all
+- Params and data example:
+ ```
+ curl --location --request GET 'http://18.136.105.112:6636/wallet/listnfttokenapprove?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
+ ```
+
+### List approve all nft token
+- Path: /wallet/listnfttokenapproveall
+- Method: GET
+- Description: Get page owner and total is approve
+- Params and data example:
+ ```
+curl --location --request GET 'http://18.136.105.112:6636/wallet/listnfttokenapproveall?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37'
+ ```
+
 
 
