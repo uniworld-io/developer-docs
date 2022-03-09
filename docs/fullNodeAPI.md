@@ -1050,7 +1050,7 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
  ```
 ###
 ## NFT
-### Create new nft template
+### Create new Nft template
 - Path: /wallet/createnfttemplate
 - Method: POST
 - Description: Create new nft template
@@ -1067,10 +1067,10 @@ curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
 }'
  ```
 
-### Create new mint nft token
+### Mint Nft token
 - Path: /wallet/mintnfttoken
 - Method: POST
-- Description: create new mint nft token
+- Description: mint new mint Nft token
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
@@ -1078,16 +1078,16 @@ curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
 --data-raw '{
     "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
     "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "uri": "https://www.facebook.com/photo/?fbid=2358336604315632&set=a.103203789828936",
+    "uri": "https://gateway.pinata.cloud/ipfs/QmTdaaaG8cNiMrrwcovX5HXrUbX98ogdK4CfK1n4E3a6j6/1.json",
     "symbol": "VIETANH",
     "metadata": ""
 }'
  ```
 
-### Remove mft minter contract
+### Remove Nft minter contract
 - Path: /wallet/removenftminter
 - Method: POST
-- Description: remove minter of nft template
+- Description: remove minter of Nft template
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/removenftminter' \
@@ -1099,10 +1099,10 @@ curl --location --request POST 'http://{host}/wallet/removenftminter' \
  ```
 
 
-### Add minter nft contract
+### Add Nft minter contract
 - Path: /wallet/addnftminter
 - Method: POST
-- Description: add minter for nft template
+- Description: add minter for Nft template
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/addnftminter' \
@@ -1114,10 +1114,10 @@ curl --location --request POST 'http://{host}/wallet/addnftminter' \
 }'
  ```
 
-### Renounce nft minter
+### Renounce Nft minter
 - Path: /wallet/renouncenftminter
 - Method: POST
-- Description: renounce nft minter
+- Description: renounce nft minter itself from Nft template
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
@@ -1128,10 +1128,10 @@ curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
 }'
  ```
 
-### Burn nft token
+### Burn Nft token
 - Path: /wallet/burnnfttoken
 - Method: POST
-- Description: burn nft token
+- Description: burn Nft token
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
@@ -1143,10 +1143,10 @@ curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
 }'
  ```
 
-### Approve nft token
+### Approve Nft token
 - Path: /wallet/approvenfttoken
 - Method: POST
-- Description: Approve a nft token of owner to other address
+- Description: Approve one Nft token of owner to other address, so the address can do transfer, burn ... operation.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
@@ -1160,10 +1160,10 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 }'
  ```
 
-### Approve all nft token
+### Approve all Nft token
 - Path: /wallet/approveforallnfttoken
 - Method: POST
-- Description: Approve all nft token of owner to other address
+- Description: Approve all Nft token of owner to other address, so the address can do transfer, burn ... operation on all Nft of the owner.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
@@ -1175,10 +1175,10 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 }'
  ```
 
-### Transfer nft token
+### Transfer Nft token
 - Path: /wallet/transfernfttoken
 - Method: POST
-- Description: Transfer a token of owner to other address
+- Description: Transfer Nft token to other address. the owner address can be real owner, approval or approval for all.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
@@ -1194,7 +1194,7 @@ curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
 ### Get Nft template
 - Path: /wallet/getnfttemplate
 - Method: GET
-- Description: Get nft template by symbol
+- Description: Get Nft template by symbol
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/wallet/getnfttemplate?symbol=VIETANH'
@@ -1202,7 +1202,7 @@ curl --location --request GET 'http://{host}/wallet/getnfttemplate?symbol=VIETAN
 ### Get Nft token
 - Path: /wallet/getnfttoken
 - Method: GET
-- Description: Get nft token by symbol and id
+- Description: Get Nft token by symbol and id
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/wallet/getnfttoken?symbol=VIETANH&id=1'
@@ -1229,13 +1229,13 @@ curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_addres
 ### List Nft token
 - Path: /wallet/listnfttoken
 - Method: GET
-- Description: Get page nft token 
+- Description: Get page Nft token 
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
  ```
 
-### List approve nft token
+### List approve Nft token
 - Path: /wallet/listnfttokenapprove
 - Method: GET
 - Description: Show info total of token and owner approve all
@@ -1244,7 +1244,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=4
  curl --location --request GET 'http://18.136.105.112:6636/wallet/listnfttokenapprove?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
  ```
 
-### List approve all nft token
+### List approve all Nft token
 - Path: /wallet/listnfttokenapproveall
 - Method: GET
 - Description: Get page owner and total is approve
