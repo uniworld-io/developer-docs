@@ -1051,15 +1051,15 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
 ###
 ## NFT
 ### Create new Nft template
-- Path: /wallet/createnfttemplate
+- Path: /wallet/createnftcontract
 - Method: POST
 - Description: Create new nft template
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/createnfttemplate' \
+curl --location --request POST 'http://{host}/wallet/createnftcontract' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "symbol":  "ABC",
+    "contract":  "ABC",
     "name": "TESTABC",
     "total_supply": 10,
     "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
@@ -1079,7 +1079,7 @@ curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
     "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
     "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
     "uri": "https://gateway.pinata.cloud/ipfs/QmTdaaaG8cNiMrrwcovX5HXrUbX98ogdK4CfK1n4E3a6j6/1.json",
-    "symbol": "VIETANH",
+    "contract": "VIETANH",
     "metadata": ""
 }'
  ```
@@ -1094,7 +1094,7 @@ curl --location --request POST 'http://{host}/wallet/removenftminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "symbol": "VIETANH"
+    "contract": "VIETANH"
 }'
  ```
 
@@ -1110,7 +1110,7 @@ curl --location --request POST 'http://{host}/wallet/addnftminter' \
 --data-raw '{
     "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "symbol": "VIETANH"
+    "contract": "VIETANH"
 }'
  ```
 
@@ -1124,7 +1124,7 @@ curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "symbol": "VIETANH"
+    "contract": "VIETANH"
 }'
  ```
 
@@ -1138,7 +1138,7 @@ curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "symbol": "VIETANH",
+    "contract": "VIETANH",
     "token_id": 1
 }'
  ```
@@ -1155,7 +1155,7 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
     "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
     "approve": true,
-    "symbol": "VIETANH",
+    "contract": "VIETANH",
     "token_id": 1
 }'
  ```
@@ -1186,26 +1186,26 @@ curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
 --data-raw '{
     "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
     "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "symbol": "VIETANH",
+    "contract": "VIETANH",
     "token_id": 1
 }'
  ```
 
 ### Get Nft template
-- Path: /wallet/getnfttemplate
+- Path: /wallet/getnftcontract
 - Method: GET
-- Description: Get Nft template by symbol
+- Description: Get Nft template by contract
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/getnfttemplate?symbol=VIETANH'
+curl --location --request GET 'http://{host}/wallet/getnftcontract?contract=VIETANH'
  ```
 ### Get Nft token
 - Path: /wallet/getnfttoken
 - Method: GET
-- Description: Get Nft token by symbol and id
+- Description: Get Nft token by contract and id
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/getnfttoken?symbol=VIETANH&id=1'
+curl --location --request GET 'http://{host}/wallet/getnfttoken?contract=VIETANH&id=1'
  ```
 
 ### Get Nft balance
@@ -1218,12 +1218,12 @@ curl --location --request GET 'http://{host}/wallet/getnfttoken?symbol=VIETANH&i
  ```
 
 ### List Nft template
-- Path: /wallet/listnfttemplate
+- Path: /wallet/listnftcontract
 - Method: GET
 - Description: Get page nft template by owner address
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
+curl --location --request GET 'http://{host}/wallet/listnftcontract?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
  ```
 
 ### List Nft token
@@ -1232,7 +1232,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttemplate?owner_addres
 - Description: Get page Nft token 
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&symbol=LEXUS'
+curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&contract=LEXUS'
  ```
 
 ### List approve Nft token
