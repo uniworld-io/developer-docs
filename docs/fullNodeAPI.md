@@ -1053,7 +1053,7 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
 ### Create new Nft template
 - Path: /wallet/createnftcontract
 - Method: POST
-- Description: Create new nft template
+- Description: Create new nft template. A model has created for generate token from itself.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/createnftcontract' \
@@ -1070,7 +1070,7 @@ curl --location --request POST 'http://{host}/wallet/createnftcontract' \
 ### Mint Nft token
 - Path: /wallet/mintnfttoken
 - Method: POST
-- Description: mint new mint Nft token
+- Description: This is creates token from contract template.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
@@ -1087,7 +1087,7 @@ curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
 ### Remove Nft minter contract
 - Path: /wallet/removenftminter
 - Method: POST
-- Description: remove minter of Nft template
+- Description: Evict minter from contract, minter can't create token from template.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/removenftminter' \
@@ -1102,7 +1102,7 @@ curl --location --request POST 'http://{host}/wallet/removenftminter' \
 ### Add Nft minter contract
 - Path: /wallet/addnftminter
 - Method: POST
-- Description: add minter for Nft template
+- Description: Assign an address is minter, minter can create token from template.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/addnftminter' \
@@ -1117,7 +1117,7 @@ curl --location --request POST 'http://{host}/wallet/addnftminter' \
 ### Renounce Nft minter
 - Path: /wallet/renouncenftminter
 - Method: POST
-- Description: renounce nft minter itself from Nft template
+- Description: An address has assigned minter of contract that can refuse 
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
@@ -1211,7 +1211,7 @@ curl --location --request GET 'http://{host}/wallet/getnfttoken?contract=VIETANH
 ### Get Nft balance
 - Path: /wallet/getnftbalanceOf
 - Method: GET
-- Description: Get count token by owner
+- Description: Get total nft token by owner
 - Params and data example:
  ```
  curl --location --request GET 'http://{host}/wallet/getnftbalanceOf?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
@@ -1220,10 +1220,10 @@ curl --location --request GET 'http://{host}/wallet/getnfttoken?contract=VIETANH
 ### List Nft template
 - Path: /wallet/listnftcontract
 - Method: GET
-- Description: Get page nft template by owner address
+- Description: Get page nft template by owner address or minter address
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/listnftcontract?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
+curl --location --request GET 'http://{host}/wallet/listnftcontract?owner_type=OWNER&owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
  ```
 
 ### List Nft token
