@@ -1131,7 +1131,7 @@ curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
 ### Burn Nft token
 - Path: /wallet/burnnfttoken
 - Method: POST
-- Description: burn Nft token
+- Description: Remove a nft token by id.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
@@ -1146,7 +1146,7 @@ curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
 ### Approve Nft token
 - Path: /wallet/approvenfttoken
 - Method: POST
-- Description: Approve one Nft token of owner to other address, so the address can do transfer, burn ... operation.
+- Description: Delegate an address for nft token, so it can do transfer, burn ... operation.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
@@ -1163,7 +1163,7 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 ### Approve all Nft token
 - Path: /wallet/approveforallnfttoken
 - Method: POST
-- Description: Approve all Nft token of owner to other address, so the address can do transfer, burn ... operation on all Nft of the owner.
+- Description: Delegate all Nft token of owner to other address, so the address can do transfer, burn ... operation on all Nft of the owner.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
@@ -1178,7 +1178,7 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 ### Transfer Nft token
 - Path: /wallet/transfernfttoken
 - Method: POST
-- Description: Transfer Nft token to other address. the owner address can be real owner, approval or approval for all.
+- Description: Transfer nft token to other address. 
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
@@ -1238,7 +1238,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=4
 ### List approve Nft token
 - Path: /wallet/listnfttokenapprove
 - Method: GET
-- Description: Show info total of token and owner approve all
+- Description: Get info page token of address that is delegated
 - Params and data example:
  ```
  curl --location --request GET '{host}/wallet/listnfttokenapprove?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
@@ -1247,7 +1247,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=4
 ### List approve all Nft token
 - Path: /wallet/listnfttokenapproveall
 - Method: GET
-- Description: Get page owner and total is approve
+- Description: Get page owner and total token that is delegated
 - Params and data example:
  ```
 curl --location --request GET '{host}/wallet/listnfttokenapproveall?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37'
