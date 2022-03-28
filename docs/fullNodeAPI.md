@@ -1143,7 +1143,7 @@ curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
 }'
  ```
 
-### Approve Nft token
+### Delegate nft token
 - Path: /wallet/approvenfttoken
 - Method: POST
 - Description: Delegate an address for nft token, so it can do transfer, burn ... operation.
@@ -1160,7 +1160,7 @@ curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
 }'
  ```
 
-### Approve all Nft token
+### Delegate all nft token
 - Path: /wallet/approveforallnfttoken
 - Method: POST
 - Description: Delegate all Nft token of owner to other address, so the address can do transfer, burn ... operation on all Nft of the owner.
@@ -1250,7 +1250,7 @@ curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=4
 - Description: Get page owner and total token that is delegated
 - Params and data example:
  ```
-curl --location --request GET '{host}/wallet/listnfttokenapproveall?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37'
+curl --location --request GET '{host}/wallet/listnfttokenapproveall?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
  ```
 
 
