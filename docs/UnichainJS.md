@@ -436,7 +436,7 @@ contract.Transfer().watch(data => console.log(data))
 
 ## APIs
 APIs to communicate with UniChain network are wrapped into *api* class. You can use either callback or async/await syntax to call the apis. For example, to get the current block, the *getCurrentBlock* is called as below
-```
+```js
 //callback style
 unichain.api.getCurrentBlock(data => {
     console.log('Current block data:', data)
@@ -450,145 +450,131 @@ console.log('Current block data:', data)
 
 ### Get current block
 Get current block information
-```
+```js
 function getCurrentBlock()
 ```
 
 ### Get block
 Get block information by block hash
-```
+```js
 function getBlockByHash(blockHash) 
 ```
 
 ### Get block by ID
 Get block information by block ID (block number)
-```
+```js
 function getBlockByNumber(blockNumber)
 ```
 
 ### Get number of transaction in a block
 Get number of transaction in a block. If blockHash is empty, the API return the number of transaction in current block
-```
+```js
 function getBlockTransactionCount(blockHash) 
 ```
 
 ### Get Transaction
 Get transaction detail by transaction hash
-```
+```js
 function getTransaction(txid)
 ```
 
 ### Get account
 Get account information from an address
-```
+```js
 function getAccount(address)
 ```
 
 ### Get balance
 Get balance of an address
-```
+```js
 function getBalance(address)
 ```
-### Get bandwidth 
-Get bandwidth of an address
-```
-function getBandwidth(address)
-```
-
-### Get token issued by an address
-Get token issued by an address
-```
-function getTokensIssuedByAddress(address)
-```
-
-### Get token by name
-Get token by token name
-```
-function getTokenFromID(tokenID)
+### Get future balance of an address
+```js
+getFutureTransfer(address, limit, offset)
 ```
 
 ### Get connected node
 Get connected nodes
-```
+```js
 function listNodes()
 ```
 
 ### Get witness list
 Get list of witness
-```
+```js
 function listWitnesses()
 ```
 
-### Get token list
-List the token in the network with limit and offset
+### Get information
+Get token information from token pool. 
+```js
+function getTokenPool(tokenName, limit, offset)
 ```
-function listTokens(limit, offset)
-```
+- if tokenName is empty or null, the API return the full token list
+- limit: the max token per page
+- offset: offset of the token 
 
+### Get future token of an address
+```js
+function getFutureToken(tokenName, address, limit, offset)
+```
 ### Get next maintenance time
 Get next maintenance time
-```
+```js
 function timeUntilNextVoteCycle()
 ```
 
 ### Get contract
 Get contract information from contract address
-```
+```js
 function getContract(contractAddress)
 ```
 
 ### Sign transaction
 Sign transaction offline with private key
-```
+```js
 function sign(unsignedTransaction, privateKey)
 ```
 
 ### Send raw transaction
 Broadcash signed transaction into network
-```
+```js
 function sendRawTransaction(signedTransaction)
-```
-
-### Send token
-This API return the unsigned transaction. To send the token, You need to sign on the return transaction, then broadcast to network
-```
-function sendToken(to, amount, tokenID)
 ```
 
 ### List proposal
 List all proposal from network
-```
+```js
 function listProposals()
 ```
 
 ### Get proposal by ID
 Get proposal by proposal ID
-```
+```js
 function getProposal(proposalID)
 ```
 
 ### Get network parameters 
 Get network parameters
-```
+```js
 function getChainParameters()
 ```
 
 ### Get account resource
 Get account resource of an address
-```
+```js
 function getAccountResources(address)
 ```
 
 ### Get node infomation
 Get node information
-```
+```js
 function getNodeInfo()
 ```
 
 ### Get reward
 Get accumulated reward of an address (witness or voters)
-```
+```js
 function getReward(address)
 ```
-
-### 
