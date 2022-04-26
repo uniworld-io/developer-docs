@@ -27,7 +27,7 @@ const Unichain = require('@uniworld/unichain-js')
 const host = 'https://test-seed.unichain.world' //testnet
 const relayHost = 'https://test-seed-relay.unichain.world' //testnet
 const event = 'https://test-event.unichain.world' 
-const unichain = new Unichain({
+const unichain = new Unichain ({
      fullHost: host, 
      solidityNode: relayHost,
      event: event
