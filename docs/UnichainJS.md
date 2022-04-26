@@ -191,8 +191,8 @@ const amount = 20
 const tokenName = 'XMAS'
 const available = 1745629200000 // ~ availabe at 26/4/2025
 const unsignedTx = await unichain.transactionBuilder.sendURC30Token(toAddress, amount, tokenName, available, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -209,8 +209,8 @@ const ownerAddress = Unichain.address.fromPrivateKey(privateKey)
 const amount = 1000000
 const tokenName = 'XMAS'
 const unsignedTx = await unichain.transactionBuilder.mintToken(tokenName, amount, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -227,8 +227,8 @@ const ownerAddress = Unichain.address.fromPrivateKey(privateKey)
 const amount = 50000
 const tokenName = 'XMAS'
 const unsignedTx = await unichain.transactionBuilder.burnToken(tokenName, amount, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -245,8 +245,8 @@ const ownerAddress = Unichain.address.fromPrivateKey(privateKey)
 const amount = Unichain.toGinza(10) //10 UNW
 const tokenName = 'XMAS'
 const unsignedTx = await unichain.transactionBuilder.contributeTokenFee(tokenName, amount, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -261,8 +261,8 @@ const privateKey = 'private-key'
 const ownerAddress = Unichain.address.fromPrivateKey(privateKey)
 const tokenName = 'XMAS'
 const unsignedTx = await unichain.transactionBuilder.withdrawFutureToken(tokenName, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -279,8 +279,8 @@ const ownerAddress = Unichain.address.fromPrivateKey(privateKey)
 const tokenName = 'XMAS'
 const toAddress = 'UaQKaz62grZaMLSXjMLcGtez65gbsVfKuS'
 const unsignedTx = await unichain.transactionBuilder.transferTokenOwner(tokenName, toAddress, ownerAddress)
-const signedTx = await unichain.unx.sign(unsignedTx, privateKey)
-const tx = await unichain.unx.sendRawTransaction(signedTx)
+const signedTx = await unichain.api.sign(unsignedTx, privateKey)
+const tx = await unichain.api.sendRawTransaction(signedTx)
 console.log(tx)
 ```
 
@@ -392,8 +392,50 @@ const ownerAddress = 'owner-address'
 const unsingedTx = await unichain.transactionBuilder.withdrawBlockRewards(ownerAddress)
 ```
 
+## Smart contract interaction
+UniChain-js supports for smart contract interactions such as get smart contract, parse abi, call, send and watch method.
+### Get smart contract
+```js
+const contractAddress = 'UTrAS9bjBMMZLF8Q4vSiHTCKD5fhDVBWgH'
+const contract = await unichain.contract().at(contractAddress)
+const abi = contract.abi
+```
+
+### call method
+```js
+//this function is for view function in smart contract
+const data = await contract.methods['balanceOf']('UjLpTPxAppjoEoJNVMJHqVbfJs7zdsxXSP').call()
+console.log(Unichain.BigNumber(data).toNumber())
+```
+### send method
+```js
+//transfer URC-20 token example
+const tx = await contract.methods['transfer']('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send()
+console.log(tx)
+
+//we can add option in send method
+const option = {
+    feeLimit:100000000 //the fee limit is 100000000 (100 UNW)
+}
+const tx = await contract.methods['transfer']('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send(option)
+
+//for the payable function, the value of UNW must be in the option object. For example
+const option = {
+    feeLimit:100000000,
+    callValue: Unichain.toGinza(20) //20 UNW
+}
+const tx = await contract.methods['buy']().send(option) //payable method
+```
+
+### Watch method
+Watch is used to listen the contract event. Unlike other methods, watch should be used with a callback function
+```js
+//watch the transfer event from URC20 contract
+contract.Transfer().watch(data => console.log(data))
+```
+
 ## APIs
-APIs to communicate with UniChain network are wrapped into *unx* class. You can use either callback or async/await syntax to call the apis. For example, to get the current block, the *getCurrentBlock* is called as below
+APIs to communicate with UniChain network are wrapped into *api* class. You can use either callback or async/await syntax to call the apis. For example, to get the current block, the *getCurrentBlock* is called as below
 ```
 //callback style
 unichain.api.getCurrentBlock(data => {
