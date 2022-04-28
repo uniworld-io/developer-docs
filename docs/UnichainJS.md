@@ -404,12 +404,16 @@ const abi = contract.abi
 ### call method
 ```js
 //this function is for view function in smart contract
+const data = await contract.balanceOf('UjLpTPxAppjoEoJNVMJHqVbfJs7zdsxXSP').call()
+// or another way:
 const data = await contract.methods['balanceOf']('UjLpTPxAppjoEoJNVMJHqVbfJs7zdsxXSP').call()
 console.log(Unichain.BigNumber(data).toNumber())
 ```
 ### send method
 ```js
 //transfer URC-20 token example
+const tx = await contract.transfer('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send()
+//or another way:
 const tx = await contract.methods['transfer']('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send()
 console.log(tx)
 
@@ -417,7 +421,7 @@ console.log(tx)
 const option = {
     feeLimit:100000000 //the fee limit is 100000000 (100 UNW)
 }
-const tx = await contract.methods['transfer']('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send(option)
+const tx = await contract.transfer('UhFm5ieHp1ibxPSuNQtiFqy3KsoRHJskut', 10).send(option)
 
 //for the payable function, the value of UNW must be in the option object. For example
 const option = {
