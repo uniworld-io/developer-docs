@@ -19,9 +19,9 @@ const users = [{
 }, ];
 
 const siteConfig = {
-    title: 'Uni Docs', // Title for your website.
+    title: 'UniChain Document for Developers', // Title for your website.
     tagline: 'Documents for developers',
-    url: 'https:uniworld.io', // Your website URL
+    url: 'https://unichain.world', // Your website URL
     baseUrl: '/', // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
@@ -84,7 +84,7 @@ const siteConfig = {
               '/js/demo.js',
               '/js/custom.js'
             ],
-    stylesheets: ['/css/custom.css'],
+    stylesheets: ['/css/custom.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'],
 
     // On page navigation for the current documentation page.
     onPageNav: 'separate',
