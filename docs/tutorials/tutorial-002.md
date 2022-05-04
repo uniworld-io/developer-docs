@@ -72,4 +72,4 @@ const txid = '6cf3c4a2ec744f1e6d8a9c71cfd8855d9d98a9072b936fc1e00555086d3121f3'
 const transaction = await unichain.api.getTransaction(txid)
 ```
 
-The detailed function and APIs list can be found [here](unichainJS)
+The detailed function and APIs list can be found [here](../unichainJS)
