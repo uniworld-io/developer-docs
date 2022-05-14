@@ -1,6 +1,6 @@
 ---
 id: tutorial-007
-title: Tutorial 007
+title: Staking contract
 ---
 
-## Tutorial 7
+## Tobe updated

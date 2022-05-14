@@ -1,6 +1,6 @@
 ---
 id: tutorial-008
-title: Tutorial 008
+title: NFT contract
 ---
 
-## Tutorial 8
+## Tobe updated

@@ -3,7 +3,7 @@
         "Learn About UniChain": ["welcome", "ecosystem"],
         "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "wallet", 
             "witnessNode", "reward"],
-        "UNW and Token": ["unw", "unichainToken", "NFT"],
+        "UNW and Token": ["unw", "unichainToken"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
         "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"],

@@ -1,9 +1,8 @@
 ---
 id: tutorial-001
-title: Tutorial 001
+title: Run UniChain Mainet Node
 ---
 
-## Run UniChain Mainet Node
 ### Prepare environment and dependencies
 *Hardware requirement*
 - OS: Window, Mac, Ubuntu, Centos ... Linux base such as Ubuntu (version > 16.04) is better

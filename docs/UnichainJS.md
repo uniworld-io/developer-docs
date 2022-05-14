@@ -15,7 +15,7 @@ npm install @uniworld/unichain-js
 ```
 ### Setup UniChain JS on web browser
 ```
-<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.2/dist/UnichainJS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.5/dist/UnichainJS.js"></script>
 ```
 Please remember to use the latest version (unichain-js@version)
 

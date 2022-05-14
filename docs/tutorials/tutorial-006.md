@@ -1,6 +1,6 @@
 ---
 id: tutorial-006
-title: Tutorial 006
+title: Build your own wallet
 ---
 
-## Tutorial 6
+## To be updated

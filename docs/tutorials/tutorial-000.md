@@ -1,6 +1,6 @@
 ---
 id: tutorial-000
-title: Tutorial 000
+title: General Information
 ---
 
 ## Overview
