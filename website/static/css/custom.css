@@ -510,4 +510,15 @@ h2 {
       justify-content: center;
     }
   }
+
+  /* Custome link in a tag */
+  a:link {
+    color: #1a0dab
+  }
+  a:visited {
+    color: #887ff0;
+  }
+  a:hover {
+    color: #0f0673;
+  }
   
