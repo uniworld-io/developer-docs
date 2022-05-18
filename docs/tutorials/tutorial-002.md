@@ -14,7 +14,7 @@ npm install @uniworld/unichain-js
 
 - For web browser: Import from static file 
 ```
-<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.5/dist/UnichainJS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.8/dist/UnichainJS.js"></script>
 ```
 Please note to chooese the latest version.
 

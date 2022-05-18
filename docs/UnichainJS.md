@@ -5,7 +5,7 @@ title: UniChain-JS API
 
 UniChain-JS is the javascript library to interact with UniChain network. It's similar to Web3js on Ethereum. The library can be run on both web browser and server side (Nodejs).The following describes how to use UniChain-JS and list of APIs/Functions
 
-_Note: This document is based on version 1.0.2_
+_Note: This document is based on version 1.0.8_
 
 ## Set up 
 ### Install UniChain JS (Nodejs)
@@ -15,7 +15,7 @@ npm install @uniworld/unichain-js
 ```
 ### Setup UniChain JS on web browser
 ```
-<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.5/dist/UnichainJS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.8/dist/UnichainJS.js"></script>
 ```
 Please remember to use the latest version (unichain-js@version)
 
