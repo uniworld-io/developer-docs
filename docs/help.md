@@ -8,8 +8,8 @@ sidebar_label: Help
 
 If you need the help, please contact us via emails
 - support@uniworld.io
-- hello@unichain.world
-- support@unibot.org
+- dev@uniworld.io
+- support@unichain.world
           
 Or join us on Telegram channels
 - [UniWorld Ecosystem](https://t.me/UniworldOfficial)
@@ -17,6 +17,8 @@ Or join us on Telegram channels
 - [UniMe Channel](https://t.me/UnimeOfficial)
 - [UniBot Channel](https://t.me/UnibotOfficial)
 - [UniChain](https://t.me/UnichainWorldOfficial)
+
+- [Discord for development discussion](https://discord.gg/W4teW5mThv) 
 
 ## Frequently Ask Questions
 <details>

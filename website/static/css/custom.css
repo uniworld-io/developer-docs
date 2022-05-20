@@ -501,7 +501,8 @@ h2 {
   */
   .card-1 {
       /* background: radial-gradient(#ff2800, #1e2405); */
-      background: radial-gradient(#bab4b3, #383534)
+      /* background: radial-gradient(#bab4b3, #383534) */
+      background: linear-gradient(90deg, #5c393a, #754744, #8e564d, #a76655, #bf785c, #d68b61, #eb9f66, #ffb56b);
   }
   /* RESPONSIVE */
   
@@ -516,8 +517,8 @@ h2 {
     color: #1a0dab
   }
   a:visited {
-    color: #887ff0;
-  }
+    color: #1a0dab
+  } 
   a:hover {
     color: #0f0673;
   }

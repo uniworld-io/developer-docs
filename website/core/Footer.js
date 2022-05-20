@@ -36,10 +36,10 @@ class Footer extends React.Component {
           <div>
             <h5>Uni Platforms Services</h5>
             <a target="_blank" href='https://unichain.world/'>UniChain Platform</a>
-            <a target="_blank" href='https://ai.unibot.org/'>UniBot Platform</a>
+            <a target="_blank" href='https://www.botlibre.com/'>UniBot Platform</a>
             <h5 className="mt-10">Uni Applications Services</h5>
             <a target="_blank" href='https://about.unime.world/'>UniMe Hub</a>
-            <a target="_blank" href='https://ai.unibot.org/'>UniBot Offline</a>
+            <a target="_blank" href='https://www.botlibre.com/'>UniBot Offline</a>
             {/* <h5 className="mt-10">Hybrid Marketing Solutions</h5>
             <a target="_blank" href='https://mia.world/'>MIA Communities</a>
             <a target="_blank" href='https://aiomo.net/'>Aiomo (comming soon)</a> */}
@@ -47,8 +47,8 @@ class Footer extends React.Component {
           <div>
             <h5>Work inquiries</h5>
             <a href="#">Interested in working with us?</a>
-            <a href="mailto:support@unibot.org">support@unibot.org</a>
             <a href="mailto:support@unichain.world">support@unichain.world</a>
+            <a href="mailto:dev@uniworld.io">dev@uniworld.io</a>
             <a href="mailto:support@mia.world">support@mia.world</a>
             <a href="mailto:support@uniworld.io">support@uniworld.io</a>
           </div>

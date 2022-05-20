@@ -38,7 +38,7 @@ const siteConfig = {
     headerLinks: [
         { doc: 'welcome', label: 'Docs' },
         { doc: 'fullNodeAPI', label: 'API' },
-        // { doc: 'tutorials/tutorials', label: 'Tutorial' },
+        { doc: 'tutorials/tutorials', label: 'Tutorial' },
         { doc: 'help', label: 'Help' }
     ],
 

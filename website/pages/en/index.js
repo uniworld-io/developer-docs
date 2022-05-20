@@ -123,7 +123,7 @@ class HomeSplash extends React.Component {
             <h2>Join UniChain's Global Community of Developers</h2>
             <p>Connect with other developers about feature flags, progressive delivery, and experimentation.</p>
             <div>
-              <a href="https://discord.gg/W5kt8nGk">Join the Discussion</a>
+              <a href="https://discord.gg/W4teW5mThv">Join the Discussion</a>
             </div>
           </div>
         </div>
