@@ -68,8 +68,8 @@ class HomeSplash extends React.Component {
               <Button href={docUrl('welcome.html')}>Knowledge</Button>
               <Button href={docUrl('fullNodeAPI.html')}>API Docs</Button>
               {/* <Button href={docUrl('tutorials.html')}>Tutorials</Button> */}
+              <Button href={docUrl('tutorials/tutorials.html')}>Tutorials</Button>
               <Button href="/asset/Unichain-whitepaper-v2.pdf">White Paper</Button>
-              <Button href={docUrl('help.html')}>Need Help</Button>
             </PromoSection>
           </div>
         </div>

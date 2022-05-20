@@ -19,7 +19,7 @@ sidebar_label: Tutorials
       <p class="card__apply">
         <a class="card__link" href="./tutorial-001" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Medium]</p>
+      <!-- <p class="card__tag">[Medium]</p> -->
     </div>
     <div class="card card-1">
       <p class="card__title">Setup Unichain-js library</p>
@@ -27,7 +27,7 @@ sidebar_label: Tutorials
       <p class="card__apply">
         <a class="card__link" href="./tutorial-002" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Basic]</p>
+      <!-- <p class="card__tag">[Basic]</p> -->
     </div>
     <div class="card card-1">
       <p class="card__title">Send UNW from your web</p>
@@ -35,15 +35,14 @@ sidebar_label: Tutorials
       <p class="card__apply">
         <a class="card__link" href="./tutorial-003" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Basic]</p>
+      <!-- <p class="card__tag">[Basic]</p> -->
     </div>
-    <div class="card card-1">
+    <!-- <div class="card card-1">
       <p class="card__title">Create URC-20 token</p>
       <p class="card__content">create URC-20 token on UniChain network that similar to ERC-20 token on ETH</p>
       <p class="card__apply">
         <a class="card__link" href="./tutorial-004" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Basic]</p>
     </div>
     <div class="card card-1">
       <p class="card__title">Play with URC-30 token</p>
@@ -51,15 +50,15 @@ sidebar_label: Tutorials
       <p class="card__apply">
         <a class="card__link" href="./tutorial-005" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Basic]</p>
-    </div>
+    </div> -->
     <div class="card card-1">
       <p class="card__title">Build your own wallet</p>
       <p class="card__content">Build your own wallet that support URC-30 token</p>
       <p class="card__apply">
         <a class="card__link" href="./tutorial-006" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-      <p class="card__tag">[Basic]</p>
+      <!-- <p class="card__tag">[Basic]</p> -->
     </div>
   </div>
 </div>
+

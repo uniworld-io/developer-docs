@@ -20,7 +20,7 @@ function getRandomKey () {
     const len = chars.length
     let key = ''
     for (let i = 0; i < 64; ++i) {
-        const random = Math.floor(Math.random() * (len - 0))
+        const random = Math.floor(Math.random() * len)
         const char = chars[random]
         key += char
     }
@@ -59,7 +59,6 @@ Get 10 UNW faucet here: [Faucet Link](/faucet) by enter the address generated ab
 
 Please write down the private key, wallet address for later uses so that you don't need to get the faucet again.
 
-## Send UNW to another address
 ## Send UNW to another address
 Assume that we’ve already generated the private key/address and got the UNW faucet from testnet. Now We will transfer a piece of UNW to another address.
 First, We need to get the inputs from UI, then prepare and validate: 

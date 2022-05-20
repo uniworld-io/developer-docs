@@ -134,7 +134,7 @@ Procedures:
 - Setup [development environment](https://reactnative.dev/docs/environment-setup)
 - Clone [this repository](https://github.com/uniworld-io/tutorials/tree/master/mobile-wallet-template)
 - Run ```npm install``` or yarn to install the dependencies.
-- With iOS, run ```cd ios && pod install`` to install podfile
+- With iOS, run ```cd ios && pod install``` to install podfile
 - Run ```yarn ios``` or ```yarn android``` To build application
  
 ### Wallet customization 
