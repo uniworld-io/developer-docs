@@ -15,7 +15,7 @@ title: Setup environment
 - UniChain is based on Java and It needs the JDK 1.8 (from Oracle). The following commands are the quick steps for setting up JDK on Ubuntu server
 ```
 - mkdir $HOME/lib & cd $HOME/lib
-- wget wget https://developers.unichain.world/archives/jdk-8u202-linux-x64.tar.gz
+- wget https://developers.unichain.world/archives/jdk-8u202-linux-x64.tar.gz
 - tar xf jdk-8u202-linux-x64.tar.gz
 - vi ~/.bashrc # add following line in the end of file and save it
 - export PATH=$PATH:$HOME/lib/jdk1.8.0_202/bin

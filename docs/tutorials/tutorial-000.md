@@ -13,7 +13,7 @@ All tutorials contains the following parts:
 All the code examples are written in Nodejs and a few lines of bash script.
 
 Although the target is for Unichain network, the tutorial’s concepts and source codes can be applied to many EVM’s blockchain platforms with little modification.
-Developers can join the [UniLab Dao Discord](https://discord.gg/ncwvpc8e)  channel for discussing any topics asking for any questions
+Developers can join the [UniLab Dao ](https://discord.gg/W4teW5mThv)  channel for discussing any topics asking for any questions
 
 ## Software requirement 
 Each tutorial may require the different software package (see the _package.json_ for more detail) but in general, the following is required: 
