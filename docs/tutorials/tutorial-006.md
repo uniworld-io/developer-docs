@@ -177,13 +177,13 @@ Successful application should look like the below picture
 
 <div style="text-align:center">
 <img src="../../img/tutorial/wallet-template-1.jpg" height="680" />
-<p><i>Walelt home screen </i></p>
+<p><i>The home screen </i></p>
 <p></p>
 <img src="../../img/tutorial/wallet-template-2.jpg" height="680" />
-<p><i>Walelt send screen </i></p>
+<p><i>The send screen </i></p>
 <p></p>
 <img src="../../img/tutorial/wallet-template-3.jpg" height="680" />
-<p><i>Walelt receive screen </i></p>
+<p><i>The receive screen </i></p>
 </div>
 
 ### Source code
