@@ -79,3 +79,16 @@ Example:
 ```
 
 ### The proposal ID list
+| Title/Description                                    | ID         |  Current value   |
+| :---                                                 |    :----:  |          :---    |           
+| proposal to modify the maintenance interval          | 0          |    6 hours       |
+| proposal to modify the cost to apply for witness     | 1          |    1000 UNW      |
+| proposal to modify account creation fee              | 2          |    0.01 UNW      |
+| proposal to modify the transaction fee (Ginza/byte)  | 3          |                  |
+| proposal to modify the token/asset creation fee      | 4          |                  |
+| proposal to modify the witness block generation reward  | 5       |                  |
+| proposal to modify the allowance for top 55 witnesses | 6         |                  |
+| proposal to modify the maximum execution time of one transaction| 13  |    50 ms |
+|                                                      |          |   ? |
+
+
