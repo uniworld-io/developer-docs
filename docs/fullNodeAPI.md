@@ -1213,209 +1213,256 @@ curl --location --request POST 'http://{host}/urc20allowance' \
  ```
 
 ###
-## NFT
-### Create new Nft template
-- Path: /wallet/createnftcontract
+## URC721 Token
+### Create new Urc721 contract
+- Path: /urc721createcontract
 - Method: POST
-- Description: Create new nft template. A model has created for generate token from itself.
+- Description: Create new Urc721 contract. A model has created for generate token from itself.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/createnftcontract' \
+curl --location --request POST 'http://{host}/urc721createcontract' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "contract":  "ABC",
-    "name": "TESTABC",
-    "total_supply": 10,
-    "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37"
+    "owner_address":  "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "symbol": "TEST",
+    "name": "Test Token",
+    "total_supply": 10000000,
+    "minter": "4422b7ec06542e524db6045a41cc767bd83db3dbc3"
 }'
  ```
 
-### Mint Nft token
-- Path: /wallet/mintnfttoken
+### Add minter for Urc721 contract
+- Path: /urc721addminter
 - Method: POST
-- Description: This is creates token from contract template.
+- Description: Add minter of an existed Urc721 contract.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/mintnfttoken' \
+curl --location --request POST 'http://{host}/urc721addminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner_address": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "uri": "https://gateway.pinata.cloud/ipfs/QmTdaaaG8cNiMrrwcovX5HXrUbX98ogdK4CfK1n4E3a6j6/1.json",
-    "contract": "VIETANH",
-    "metadata": ""
+    "owner_address":  "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "minter": "4422b7ec06542e524db6045a41cc767bd83db3dbc3"
 }'
  ```
 
-### Remove Nft minter contract
-- Path: /wallet/removenftminter
+### Remove minter of an existed Urc721 contract
+- Path: /urc721removeminter
 - Method: POST
-- Description: Evict minter from contract, minter can't create token from template.
+- Description: Remove minter of an existed Urc721 contract.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/removenftminter' \
+curl --location --request POST 'http://{host}/urc721removeminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "contract": "VIETANH"
+    "owner_address":  "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01"
 }'
  ```
 
-
-### Add Nft minter contract
-- Path: /wallet/addnftminter
+### Renounce minter of Urc721 token
+- Path: /urc721renounceminter
 - Method: POST
-- Description: Assign an address is minter, minter can create token from template.
+- Description: An address has assigned minter of contract that can refuse.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/addnftminter' \
+curl --location --request POST 'http://{host}/urc721renounceminter' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "minter": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "contract": "VIETANH"
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01"
 }'
  ```
 
-### Renounce Nft minter
-- Path: /wallet/renouncenftminter
+### Mint Urc721 token
+- Path: /urc721mint
 - Method: POST
-- Description: An address has assigned minter of contract that can refuse 
+- Description: This creates token from contract template.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/renouncenftminter' \
+curl --location --request POST 'http://{host}/urc721mint' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "contract": "VIETANH"
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "to_address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "uri": "https://example.com",
+    "token_id": 12345
 }'
  ```
 
-### Burn Nft token
-- Path: /wallet/burnnfttoken
+### Burn Urc721 token
+- Path: /urc721burn
 - Method: POST
-- Description: Remove a nft token by id.
+- Description: Remove an Urc721 token by id.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/burnnfttoken' \
+curl --location --request POST 'http://{host}/urc721burn' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "contract": "VIETANH",
-    "token_id": 1
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "token_id": 11234
 }'
  ```
 
-### Delegate nft token
-- Path: /wallet/approvenfttoken
+### Approve Urc721 token
+- Path: /urc721approve
 - Method: POST
-- Description: Delegate an address for nft token, so it can do transfer, burn ... operation.
+- Description: Approve an address for Urc21 token, so it can do transfer, burn ... operation.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
+curl --location --request POST 'http://{host}/urc721approve' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "approve": true,
-    "contract": "VIETANH",
-    "token_id": 1
-}'
- ```
-
-### Delegate all nft token
-- Path: /wallet/approveforallnfttoken
-- Method: POST
-- Description: Delegate all Nft token of owner to other address, so the address can do transfer, burn ... operation on all Nft of the owner.
-- Params and data example:
- ```
-curl --location --request POST 'http://{host}/wallet/approvenfttoken' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "token_id": 12345,
+    "to": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
     "approve": true
 }'
  ```
 
-### Transfer Nft token
-- Path: /wallet/transfernfttoken
+### Approve all Urc721 token
+- Path: /urc721setapprovalforall
 - Method: POST
-- Description: Transfer nft token to other address. 
+- Description: Approve all Urc721 token of owner to other address, so the address can do transfer, burn ... operation on all Urc721 token of the owner.
 - Params and data example:
  ```
-curl --location --request POST 'http://{host}/wallet/transfernfttoken' \
+curl --location --request POST 'http://{host}/urc721setapprovalforall' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "owner": "556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37",
-    "to_address": "55533178786d6e34357663484d5779526f543936394e42744c7350754c6d566b4d63",
-    "contract": "VIETANH",
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "to_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "approve": true
+}'
+ ```
+
+### Transfer from Urc721 token
+- Path: /urc721transferfrom
+- Method: POST
+- Description: Transfer Urc721 token to other address. 
+- Params and data example:
+ ```
+curl --location --request POST 'http://{host}/urc721transferfrom' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "to": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
     "token_id": 1
 }'
  ```
 
-### Get Nft template
-- Path: /wallet/getnftcontract
+### Get balance of Urc721 token
+- Path: /urc721balanceof
 - Method: GET
-- Description: Get Nft template by contract
+- Description: Get total Urc721 token by owner
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/getnftcontract?contract=VIETANH'
- ```
-### Get Nft token
-- Path: /wallet/getnfttoken
-- Method: GET
-- Description: Get Nft token by contract and id
-- Params and data example:
- ```
-curl --location --request GET 'http://{host}/wallet/getnfttoken?contract=VIETANH&id=1'
+ curl --location --request GET 'http://{host}/urc721balanceof?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=442fc353c683247d30a0165cb73329892d3c7f9f17'
  ```
 
-### Get Nft balance
-- Path: /wallet/getnftbalanceOf
+### Get name of Urc721 token
+- Path: /urc721name
 - Method: GET
-- Description: Get total nft token by owner
+- Description: Get Urc721 token name by address
 - Params and data example:
  ```
- curl --location --request GET 'http://{host}/wallet/getnftbalanceOf?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
+curl --location --request GET 'http://{host}/urc721name?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### List Nft template
-- Path: /wallet/listnftcontract
+### Get symbol of Urc721 token
+- Path: /urc721symbol
 - Method: GET
-- Description: Get page nft template by owner address or minter address
+- Description: Get Urc721 token symbol by address
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/listnftcontract?owner_type=OWNER&owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5'
+curl --location --request GET 'http://{host}/urc721symbol?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### List Nft token
-- Path: /wallet/listnfttoken
+### Get uri of Urc721 token
+- Path: /urc721tokenuri
 - Method: GET
-- Description: Get page Nft token 
+- Description: Get Urc721 token URI by address and token_id
 - Params and data example:
  ```
-curl --location --request GET 'http://{host}/wallet/listnfttoken?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_index=0&page_size=5&contract=LEXUS'
+curl --location --request GET 'http://{host}/urc721tokenuri?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
  ```
 
-### List approve Nft token
-- Path: /wallet/listnfttokenapprove
+### Get total supply of Urc721 token
+- Path: /urc721totalsupply
 - Method: GET
-- Description: Get info page token of address that is delegated
+- Description: Get Urc721 total supply by address
 - Params and data example:
  ```
- curl --location --request GET '{host}/wallet/listnfttokenapprove?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
+curl --location --request GET 'http://{host}/urc721totalsupply?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### List approve all Nft token
-- Path: /wallet/listnfttokenapproveall
+### Get owner of an Urc721 token
+- Path: /urc721ownerof
 - Method: GET
-- Description: Get page owner and total token that is delegated
+- Description: Find owner of Urc721 token with address and id
 - Params and data example:
  ```
-curl --location --request GET '{host}/wallet/listnfttokenapproveall?owner_address=556b32386e344132386e6658686759576e5272366d58446254624165436b45744a37&page_index=0&page_size=10'
+curl --location --request GET 'http://{host}/urc721ownerof?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
  ```
 
+### Get Urc721 approved token
+- Path: /urc721getapproved
+- Method: GET
+- Description: Get Urc721 approved token with address and id
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721getapproved?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
+ ```
+
+### Check if Urc721 token is approved for all
+- Path: /urc721isapprovedforall
+- Method: GET
+- Description: Check if Urc721 token is approved for all
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721isapprovedforall?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=442fc353c683247d30a0165cb73329892d3c7f9f17&operator=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+
+### List Urc721 contracts
+- Path: /urc721contractlist
+- Method: GET
+- Description: Get list contracts of Urc721 
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721contractlist?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_size=1&page_index=1&owner_type=owner'
+ ```
+
+### List Urc721 token
+- Path: /urc721tokenlist
+- Method: GET
+- Description: Get list of Urc721 token 
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721tokenlist?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=44276adef944a4b1dd7c99cd68752e7d671954838f&page_index=0&page_size=5&owner_type=owner'
+ ```
+
+### Urc721 contract info
+- Path: /urc721contractget
+- Method: GET
+- Description: Get Urc721 contract info
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721contractget?address=44276adef944a4b1dd7c99cd68752e7d671954838f'
+ ```
+
+### Urc721 token info
+- Path: /urc721tokenget
+- Method: GET
+- Description: Get Urc721 token info
+- Params and data example:
+ ```
+curl --location --request GET 'http://{host}/urc721tokenget?address=44276adef944a4b1dd7c99cd68752e7d671954838f&id=123'
+ ```
 
 
