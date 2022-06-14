@@ -2,7 +2,7 @@
     "docs": {
         "Learn About UniChain": ["welcome", "ecosystem"],
         "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "wallet", 
-            "witnessNode", "reward", "networkGovernance"],
+            "witnessNode", "reward", "networkGovernance", "networkUpgrade"],
         "UNW and Token": ["unw", "unichainToken"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
