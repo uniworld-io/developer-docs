@@ -923,6 +923,295 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
     "page_index": 0
 }'
  ```
+
+###
+## URC20 Native Token
+### Create new Urc20 token contract
+- Path: /urc20createcontract
+- Method: POST
+- Description: Create new Urc20 contract
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20createcontract' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "symbol": "TEST",
+    "name": "Test Token",
+    "decimals": 10,
+    "max_supply": 1000000000,
+    "total_supply": 500000000,
+    "start_time": 1640995200,
+    "end_time": 1861920000,
+    "url": "https://example.com",
+    "fee": 100,
+    "extra_fee_rate": 100,
+    "fee_pool": 10000000,
+    "burned": 500000000,
+    "latest_operation_time": 1861920000,
+    "lot": 12345,
+    "fee_pool_origin": 10000000,
+    "exch_unx_num": 12345,
+    "exch_num": 12345,
+    "exch_enable": true,
+    "critical_update_time": 1861920000,
+    "create_acc_fee" 1
+}'
+ ```
+
+### Transfer Urc20 token
+- Path: /urc20transfer
+- Method: POST
+- Description: Transfer token to other account
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20transfer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "to": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "amount": "10",
+    "available_time": 1861920000
+
+}'
+ ```
+
+### Transfer from Urc20 token
+- Path: /urc20transferfrom
+- Method: POST
+- Description: Moves amount tokens from sender to recipient using the allowance mechanism. amount is then deducted from the caller’s allowance.
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20transferfrom' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "from": "440bc353c683213030a0525cb76169442d3c729f01",
+    "to": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "amount": "10",
+    "available_time": 1861920000
+}'
+ ```
+
+### Approve Urc20 token 
+- Path: /urc20approve
+- Method: POST
+- Description: Emitted when the allowance of a spender for an owner is set by a call to approve. value is the new allowance.
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20approve' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "spender": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "amount": 10
+}'
+ ```
+
+### Contribute Urc20 token to pool fee
+- Path: /urc20contributepoolfee
+- Method: POST
+- Description: Contribute token to a pool fee 
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20contributepoolfee' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "amount": 100
+}'
+ ```
+
+### Update parameters Urc20 token contract
+- Path: /urc20updateparams
+- Method: POST
+- Description: Update parameters of Urc20 contract
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20updateparams' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "fee": 100,
+    "extra_fee_rate": 100,
+    "lot": 12345,
+    "url": "https://example.com",
+    "total_supply": 2000000000,
+    "fee_pool": 20000000,
+    "exch_unx_num": 123456,
+    "exch_num": 123456,
+    "create_acc_fee": 1000
+}'
+ ```
+
+### Mint Urc20 token 
+- Path: /urc20mint
+- Method: POST
+- Description: Mint new amount of token
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20mint' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "440bc353c683213030a0525cb76169442d3c729f01",
+    "amount": 1000000000,
+    "to_address": "44276adef944a4b1dd7c99cd68752e7d671954838f"
+}'
+ ```
+
+### Burn Urc20 token 
+- Path: /urc20burn
+- Method: POST
+- Description: Burn token
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20burn' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "amount": 1000000000
+}'
+ ```
+
+### Withdraw Urc20 token in future 
+- Path: /urc20withdrawfuture
+- Method: POST
+- Description: Withdraw locked deal in the future
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20withdrawfuture' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "address": "44276adef944a4b1dd7c99cd68752e7d671954838f"
+}'
+ ```
+
+### Transfer owner of Urc20 token 
+- Path: /urc20transferowner
+- Method: POST
+- Description: Transfer owner of a token to new address
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20transferowner' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
+    "to_address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "address": "442fc353c683247d30a0165cb73329892d3c7f9f17"
+}'
+ ```
+
+### Exchange Urc20 token 
+- Path: /urc20exchange
+- Method: POST
+- Description: Exchange token to other address
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20exchange' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "amount": 10000
+}'
+ ```
+
+### List Urc20 token contracts 
+- Path: /urc20contractlist
+- Method: GET
+- Description: Get list of contracts
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20contractlist?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3&symbol=UNW&page_size=1&page_index=1'
+ ```
+
+### Get future deal of Urc20 token 
+- Path: /urc20futureget
+- Method: GET
+- Description: Get information of a future deal
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20futureget?owner_address=4422b7ec06542e524db6045a41cc767bd83db3dbc3&address=UikVt2k4YfmkrDyp7cnJxKxVdz7sjsd5cN&page_size=1&page_index=1'
+ ```
+
+### Get Urc20 token name 
+- Path: /urc20name
+- Method: GET
+- Description: Get name of a token by address
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20name?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Get Urc20 token symbol 
+- Path: /urc20symbol
+- Method: GET
+- Description: Get symbol of a token by address
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20symbol?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Get Urc20 token decimals 
+- Path: /urc20decimals
+- Method: GET
+- Description: Get decimals of a token by address
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20decimals?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Get total supply of Urc20 token 
+- Path: /urc20totalsupply
+- Method: GET
+- Description: Get total supply of a token by address
+- Params and data example:
+```
+curl --location --request POST 'http://{host}/urc20totalsupply?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Get Urc20 balance 
+- Path: /urc20balanceof
+- Method: GET
+- Description: Get balance token of an address
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20balanceof?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Get owner of Urc20 token 
+- Path: /urc20getowner
+- Method: GET
+- Description: Get owner of an address
+- Params and data example:
+```
+curl --location --request GET 'http://{host}/urc20getowner?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
+ ```
+
+### Allowance Urc20 token 
+- Path: /urc20allowance
+- Method: POST
+- Description: Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through transferFrom.
+- Params and data example:
+ ```
+curl --location --request POST 'http://{host}/urc20allowance' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "owner":  "442fc353c683247d30a0165cb73329892d3c7f9f17",
+    "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
+    "spender": "44276adef944a4b1dd7c99cd68752e7d671954838f"
+}'
+ ```
+
 ###
 ## NFT
 ### Create new Nft template
