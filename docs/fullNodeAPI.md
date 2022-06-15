@@ -956,7 +956,7 @@ curl --location --request POST 'http://{host}/urc20createcontract' \
     "exch_num": 12345,
     "exch_enable": true,
     "critical_update_time": 1861920000,
-    "create_acc_fee" 1
+    "create_acc_fee": 1
 }'
  ```
 
