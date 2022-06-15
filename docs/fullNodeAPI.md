@@ -940,15 +940,15 @@ curl --location --request POST 'http://{host}/urc20createcontract' \
     "symbol": "TEST",
     "name": "Test Token",
     "decimals": 10,
-    "max_supply": 1000000000,
-    "total_supply": 500000000,
+    "max_supply": "1000000000",
+    "total_supply": "500000000",
     "start_time": 1640995200,
     "end_time": 1861920000,
     "url": "https://example.com",
     "fee": 100,
     "extra_fee_rate": 100,
     "fee_pool": 10000000,
-    "burned": 500000000,
+    "burned": "500000000",
     "latest_operation_time": 1861920000,
     "lot": 12345,
     "fee_pool_origin": 10000000,
@@ -1008,7 +1008,7 @@ curl --location --request POST 'http://{host}/urc20approve' \
     "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
     "address": "440bc353c683213030a0525cb76169442d3c729f01",
     "spender": "44276adef944a4b1dd7c99cd68752e7d671954838f",
-    "amount": 10
+    "amount": "10"
 }'
  ```
 
@@ -1042,7 +1042,7 @@ curl --location --request POST 'http://{host}/urc20updateparams' \
     "extra_fee_rate": 100,
     "lot": 12345,
     "url": "https://example.com",
-    "total_supply": 2000000000,
+    "total_supply": "2000000000",
     "fee_pool": 20000000,
     "exch_unx_num": 123456,
     "exch_num": 123456,
@@ -1061,7 +1061,7 @@ curl --location --request POST 'http://{host}/urc20mint' \
 --data-raw '{
     "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
     "address": "440bc353c683213030a0525cb76169442d3c729f01",
-    "amount": 1000000000,
+    "amount": "1000000000",
     "to_address": "44276adef944a4b1dd7c99cd68752e7d671954838f"
 }'
  ```
@@ -1077,7 +1077,7 @@ curl --location --request POST 'http://{host}/urc20burn' \
 --data-raw '{
     "owner_address": "44276adef944a4b1dd7c99cd68752e7d671954838f",
     "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
-    "amount": 1000000000
+    "amount": "1000000000"
 }'
  ```
 
@@ -1121,7 +1121,7 @@ curl --location --request POST 'http://{host}/urc20exchange' \
 --data-raw '{
     "owner_address": "442fc353c683247d30a0165cb73329892d3c7f9f17",
     "address": "4422b7ec06542e524db6045a41cc767bd83db3dbc3",
-    "amount": 10000
+    "amount": "10000"
 }'
  ```
 
