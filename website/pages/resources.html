@@ -1,83 +1,176 @@
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title>Unichain Public Resources</title>
-
-		<style>
-			body {
-				width: 60%;	
-				margin-left: 20%;
-				margin-top: 50px;
-				font-size: 1.25rem;
-				font-family: 'Roboto';
-			}
-			.page_title {
-				color: red;
-				text-align: center;
-				font-size: 2.5rem;
-				font-weight: bold;
-			}
-		</style>
-	</head>
-
-	<body>
-		<p class="page_title">The Public Resources</p>
-		<p>
-			Uniworld provides some resources for developers and applications to integrate with the Unichain network. As the public resources, all the nodes are accessed by publicity. 
-			We have the rate limit and cannot guarantee the availability if the nodes are over accessed. For stability and production use, please run your own nodes. 
-			The guides to run the blockchain nodes can be <a href="https://developers.unichain.world/docs/tutorials/tutorial-001" target="_blank">found here</a>
-		</p>
-		<h2>Testnet nodes:</h2>
-		<p><b>Full node</b></p>
-		<ul>
-			<li>testnet-seed-1.unichain.world</li>
-			<li>testnet-seed-2.unichain.world</li>
-		</ul>
-		<p><b>Relay node</b></p>
-		<ul>
-			<li>testnet-relay-1.unichain.world</li>
-			<li>testnet-relay-2.unichain.world</li>
-		</ul>
-		<p><b>Event node</b></p>
-		<ul>
-			<li>testnet-event-1.unichain.world</li>
-			<li>testnet-event-2.unichain.world</li>
-		</ul>
-		<h2>Mainnet nodes:</h2>
-		<p><b>Full node</b></p>
-		<ul>
-			<li>seed-1.unichain.world</li>
-			<li>seed-2.unichain.world</li>
-			<li>seed-2.unichain.world</li>
-		</ul>
-		<p><b>Relay node</b></p>
-		<ul>
-			<li>relay-1.unichain.world</li>
-			<li>relay-2.unichain.world</li>
-			<li>relay-2.unichain.world</li>
-		</ul>
-		<p><b>Event node</b></p>
-		<ul>
-			<li>event-1.unichain.world</li>
-			<li>event-2.unichain.world</li>
-		</ul>
-		<h2>How to use the public resources</h2>
-		<p>The public resources can be used for</p>
-		<ul>
-			<li>Construct the UniChainJs library, check out <a href="./docs/unichainJS" target="_blank">this link</a></li>
-			<li>Call API from nodes, check out <a href="./docs/fullNodeAPI" target="_blank">this API documents</a></li>
-			<li>Config for UniWallet extension (network), CLI Wallet and other purposes</li>
-		</ul>
-		<p>Developers may need some UNW for testing purposes. They can claim the faucet from testnet 
-			<a href="./faucet" target="_blank">by this link</a>.
-		<i>Please note that UNW in testnet has no value and can be reseted at any time.</i>
-		</p>	
-		<p></p>
-	</body>
+<html lang="">
+  <head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UniDocs · The Technical Documents for Developers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Docusaurus" />
+    <meta name="description" content="The Technical Documents for Developers" />
+    <meta property="og:title" content="UniDocs · The Technical Documents for Developers" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://unichain.world/" />
+    <meta property="og:description" content="The Technical Documents for Developers" />
+    <meta property="og:image" content="https://unichain.world/img/undraw_online.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://unichain.world/img/undraw_tweetstorm.svg" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script type="text/javascript" src="https://buttons.github.io/buttons.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <script type="text/javascript" src="/js/demo.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script src="/js/scrollSpy.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
+	<script src="/js/codetabs.js"></script>
+	<!-- custom style -->
+	<style>
+		.custom_content {
+			text-align: left;
+			width: 60%;
+			margin-left: 20%;
+		}
+		.page_title {
+			font-size: 2.5rem;
+			font-weight: bold;
+			margin-top: 30px;
+			text-align: center;
+			width: 100%;
+			color: red;
+		}
+	</style>
+  </head>
+  <body>
+    <div class="fixedHeaderContainer">
+      <div class="headerWrapper wrapper">
+        <header>
+          <a href="/">
+            <img class="logo" src="/img/uniworld-core.png" alt="UniDocs" />
+            <h2 class="headerTitleWithLogo">UniDocs</h2>
+          </a>
+          <div class="navigationWrapper navigationSlider">
+            <nav class="slidingNav">
+              <ul class="nav-site nav-site-internal">
+                <li class="">
+                  <a href="/docs/welcome" target="_self">Docs</a>
+                </li>
+                <li class="">
+                  <a href="/docs/fullNodeAPI" target="_self">API</a>
+                </li>
+                <li class="">
+                  <a href="/docs/tutorials/tutorials" target="_self">Tutorial</a>
+                </li>
+                <li class="">
+                  <a href="/docs/help" target="_self">Help</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="navPusher">
+      <div>
+        <div class="custom_content">
+			<!-- Start content -->
+			<p class="page_title">The Public Resources</p>
+			<p>
+				Uniworld provides some resources for developers and applications to integrate with the Unichain network. As the public resources, all the nodes are accessed by publicity. 
+				We have the rate limit and cannot guarantee the availability if the nodes are over accessed. For stability and production use, please run your own nodes. 
+				The guides to run the blockchain nodes can be <a href="https://developers.unichain.world/docs/tutorials/tutorial-001" target="_blank">found here</a>
+			</p>
+			<h2>Testnet nodes:</h2>
+			<p><b>Full node</b></p>
+			<ul>
+				<li>testnet-seed-1.unichain.world</li>
+				<li>testnet-seed-2.unichain.world</li>
+			</ul>
+			<p><b>Relay node</b></p>
+			<ul>
+				<li>testnet-relay-1.unichain.world</li>
+				<li>testnet-relay-2.unichain.world</li>
+			</ul>
+			<p><b>Event node</b></p>
+			<ul>
+				<li>testnet-event-1.unichain.world</li>
+				<li>testnet-event-2.unichain.world</li>
+			</ul>
+			<h2>Mainnet nodes:</h2>
+			<p><b>Full node</b></p>
+			<ul>
+				<li>seed-1.unichain.world</li>
+				<li>seed-2.unichain.world</li>
+				<li>seed-2.unichain.world</li>
+			</ul>
+			<p><b>Relay node</b></p>
+			<ul>
+				<li>relay-1.unichain.world</li>
+				<li>relay-2.unichain.world</li>
+				<li>relay-2.unichain.world</li>
+			</ul>
+			<p><b>Event node</b></p>
+			<ul>
+				<li>event-1.unichain.world</li>
+				<li>event-2.unichain.world</li>
+			</ul>
+			<h2>How to use the public resources</h2>
+			<p>The public resources can be used for</p>
+			<ul>
+				<li>Construct the UniChainJs library, check out <a href="./docs/unichainJS" target="_blank">this link</a></li>
+				<li>Call API from nodes, check out <a href="./docs/fullNodeAPI" target="_blank">this API documents</a></li>
+				<li>Config for UniWallet extension (network), CLI Wallet and other purposes</li>
+			</ul>
+			<p>Developers may need some UNW for testing purposes. They can claim the faucet from testnet 
+				<a href="./faucet" target="_blank">by this link</a>.
+			<i>Please note that UNW in testnet has no value and can be reseted at any time.</i>
+			</p>	
+			<!-- End of content -->
+      </div>
+      <footer class="nav-footer" id="footer">
+        <section class="sitemap">
+          <a href="/" class="nav-home">
+            <img src="/img/logo-white.png" alt="UniDocs" />
+          </a>
+          <div>
+            <h5>Uni Platforms Services</h5>
+            <a target="_blank" href="https://unichain.world/">UniChain Platform</a>
+            <a target="_blank" href="https://www.botlibre.com/">UniBot Platform</a>
+            <h5 class="mt-10">Uni Applications Services</h5>
+            <a target="_blank" href="https://about.unime.world/">UniMe Hub</a>
+            <a target="_blank" href="https://www.botlibre.com/">UniBot Offline</a>
+          </div>
+          <div>
+            <h5>Work inquiries</h5>
+            <a href="#">Interested in working with us?</a>
+            <a href="/cdn-cgi/l/email-protection#a8dbddd8d8c7dadce8ddc6c1cbc0c9c1c686dfc7dac4cc">
+              <span class="__cf_email__" data-cfemail="81f2f4f1f1eef3f5c1f4efe8e2e9e0e8efaff6eef3ede5">[email&#160;protected]</span>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#bcd8d9cafcc9d2d5cbd3ced0d892d5d3">
+              <span class="__cf_email__" data-cfemail="761213003603181f0119041a12581f19">[email&#160;protected]</span>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#186b6d6868776a6c58757179366f776a747c">
+              <span class="__cf_email__" data-cfemail="6a191f1a1a05181e2a07030b441d0518060e">[email&#160;protected]</span>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#a6d5d3d6d6c9d4d2e6d3c8cfd1c9d4cac288cfc9">
+              <span class="__cf_email__" data-cfemail="f0838580809f8284b0859e99879f829c94de999f">[email&#160;protected]</span>
+            </a>
+          </div>
+          <div>
+            <h5>Telegram Official</h5>
+            <a target="_blank" href="https://t.me/UniworldOfficial">UniWorld Ecosystem</a>
+            <a target="_blank" href="https://t.me/MiaworldMultiple">Group Discussion</a>
+            <a target="_blank" href="https://t.me/UnimeOfficial">UniMe Channel</a>
+            <a target="_blank" href="https://t.me/UnibotOfficial">UniBot Channel</a>
+            <a target="_blank" href="https://t.me/UnichainWorldOfficial">UniChain Channel</a>
+          </div>
+        </section>
+        <section class="copyright">Copyright © 2022 UniWorld</section>
+      </footer>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://localhost:35729/livereload.js"></script>
+  </body>
 </html>
-
