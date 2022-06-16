@@ -24,18 +24,8 @@ Go to [Google Chrome store](https://chrome.google.com/webstore/detail/uniwallet/
 To develop for UniChain, install UniWallet Extension in the Chrome browser on your development machine. [Dowload here](https://chrome.google.com/webstore/detail/uniwallet/glifbmajcmgbjkeklllabmmpbgecnmnn)
 Once UniWallet Extension is installed and running (make sure you back up your Menmonic Phrase and Private), you should find that new browser tabs have a **window.unichainJs** object available in the developer console. This is how your website will interact with UniChain.
 
-### Basic Considerations
-
-##### UniChain Browser Detection
-To verify if the browser is running UniChain Extension, copy and paste the code snippet below in the developer console of your web browser:
-```
-if (typeof window.unichainJs !== 'undefined') {
-  console.log('UniChain is installed!');
-}
-```
-
 ##### Running a Test Network
-In the top right meny of UniWallet Extension, choose "Node manage", then select the network you are currently connected to. We supply you 2 networks for now: Testnet and Mainnet.
+In the top right meny of UniWallet Extension, choose "Node manage", then select the network you are currently connected to. We supply you 2 networks for now: Testnet and Mainnet. You can also add your own grpc nodes.
 
 ##### User State
 Currently there are a few stateful things to consider when interacting with this API:
@@ -44,7 +34,17 @@ Currently there are a few stateful things to consider when interacting with this
 
 Both of these are available synchronously as **unichainJs.fullNode** and **unichainJs.defaultAddress.base58**.
 
-##### Connecting to UniWallet Extension
+### UniChain Browser Detection
+To verify if the browser is running UniChain Extension, copy and paste the code snippet below in the developer console of your web browser or write your codes in script part of any html files
+```js
+if (!window.unichainJs) {
+    console.log('Unichain wallet extension is not installed!')
+} else {
+    console.log('Congratulation! you are ready to connect to unichain wallet extension')
+}
+```
+
+### Connecting to UniWallet Extension
 "Connecting" to UniWallet Extension means "to access the user's UniChain accounts".
 
 You should only initiate a connection request in response to direct user action, such as clicking a button. You should always disable the "connect" button while the connection request is pending. You should never initiate a connection request on page load.
@@ -61,9 +61,9 @@ function connectWallet() {
 }
 ```
 
-##### Open extension programmatically
+### Open extension programmatically
 
-Please use this snippet below:
+The snippet codes below will open the wallet extension and ask users to login into wallet if they logged before.
 ```js
 function openExtension() {
     if (window.unichainJs) {
@@ -72,7 +72,8 @@ function openExtension() {
 }
 ```
 
-##### Send UNW via extension
+### Examples
+#### Send UNW via extension
 
 You can send UNW or any tokens by signing transaction via extension. The bellow code is the example of sending _10 UNW_ to _UWLndt5XcHRpvhVJohS6CGNh5eC1X1pt3S_ address 
 ```js
@@ -98,7 +99,7 @@ async function sendUNW() {
 
 When the function ```unichainjs.api.sign(tx)``` is called, the wallet extension will be opened and ask users to confirm or reject the transaction so that the code does not need to provide any private key in the ```sign``` function. 
 
-##### Call Smart contract - Send method
+#### Call Smart contract - Send method
 UniWallet extension will be open whenever users trigger a smart contract functions.
 ```js
 async function callContract() {
