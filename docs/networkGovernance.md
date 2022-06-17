@@ -85,11 +85,22 @@ Example:
 | proposal to modify the cost to apply for witness                      | 1    |    1000 UNW      |
 | proposal to modify account creation fee                               | 2    |    0.01 UNW      |
 | proposal to modify the transaction fee (Ginza/byte)                   | 3    |     1 Ginza      |
-| proposal to modify the token/asset creation fee                       | 4    |     500 UNW      |
+| proposal to modify the token creation fee                             | 4    |     500 UNW      |
 | proposal to modify the witness block generation reward                | 5    |     1 UNW        |
-| proposal to modify the witness stanby allowance                       | 6    |     7363 UNW     |
+| proposal to modify the witness standby allowance                      | 6    |     7363 UNW     |
+| proposal to modify account creation in system contract                | 7    |     0 UNW        |
 | proposal to modify the maximum execution time of one transaction      | 13   |    50 ms         |
+| proposal to allow update account name (0 or 1)                        | 14   |     0            |
+| proposal to allow delegate resource (0 or 1)                          | 16   |     1            |
+| proposal to allow the initiation of multi-signature (0 or 1)          | 20   |     1            |
+| proposal to modify the account update permision fee                   | 22   |     2 UNW        |
+| proposal to modify the multi-signature fee                            | 23   |     0.25 UNW     |
 | proposal to modify the allowance for top 55 witnesses                 | 31   |     1 UNW        |
-| proposal to update the network                                        | 34   |  [2, 3, 4, 5 ...]|
+| proposal to update the network version                                | 34   |  [2, 3, 4, 5 ...]|
+| proposal to change the max time in future transfer UNW                | 35   |  50 years        |
+| proposal to change the max time in future transfer token              | 36   |  50 years        |
+| proposal to change the fee of native URC-20/URC-30 update operation   | 37   |  2 UNW           |
+| proposal to the max time of locking UNW (freeze UNW)                  | 38   |  3 days          |
+| proposal to the min time of locking UNW (freeze UNW)                  | 39   |  3 days          |
 
 

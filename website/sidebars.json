@@ -6,7 +6,6 @@
         "UNW and Token": ["unw", "unichainToken"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
-        "PosBridge": ["architecturePosBridge", "buildAndDeployPosBridge", "interactWithPosBridge"],
         "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"],
         "Example & Demo": ["example"],
         "Archive Package": ["utils"]
