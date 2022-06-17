@@ -29,7 +29,7 @@ The previous version supported the event in the message queue, kafka. This versi
 
 The release package can be [downloaded here](https://github.com/uniworld-io/unichain-core/releases/tag/v2.0.7)  
 
-The update will be done through a network proposal. We recommend all running nodes to update to this version as soon as possible. 
+The update will be done through a network proposal. We recommend all running nodes to update to this version as soon as possible. After switching to new version, the blockchain nodes running the old version may be disconnected and cannot sync with the network
 
 ### How to upgrade to new version 
 The steps below describe how to upgrade UniChain to the new version
