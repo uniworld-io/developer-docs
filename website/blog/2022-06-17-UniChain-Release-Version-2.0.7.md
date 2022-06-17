@@ -8,8 +8,8 @@ authorImageUrl: ../../../../img/blog/identity-01.png
 
 UniChain has released a new version 2.0.7 as the active development. There were some bugs fixed and features added to this version, including: 
 
-### Release the native URC-20 token: 
-In the previous version, UniChain releases the URC-30 which follows the ERC-20 standard and running on top of UVM, that means users does not need to deploy smart contracts for URC-30 tokens and transferring URC-30 token does not need UNW as the transaction fee (the gas). However, the URC-30 lacked some features such as transferFrom, approve … functions, the token name, symbol and address are not consistent also. 
+### Release the native URC-20 token
+In the previous version, UniChain releases the URC-30 which follows the ERC-20 standard and running on top of UVM, that means users does not need to deploy smart contracts for URC-30 tokens and transferring URC-30 token does not need UNW as the transaction fee (the gas). However, the URC-30 lacked some features such as transferFrom, approve … functions, the token name, symbol and address are not consistent too. 
 The native URC-20 token is totally compatible with URC-20 (follow the ERC-20 standard) and can be used as the URC-30 replacement. 
 
 In short, the native URC-20: 
@@ -18,13 +18,13 @@ In short, the native URC-20:
 - Transferring token does not need UNW as the transaction fee 
 - Support transferring token for future uses (lock)
 
-### Release native URC-721 token: 
+### Release native URC-721 token
 After a long time of testing, this version has included the native URC-721 token. This feature supports native NFTs which means that any users can create the NFT token on UniChain network without any smart contract. It helps the traditional users such as the artist, musician, photographers … to NFTized their digital assets with some simple clicks. 
 
 ### Support transferring the future deal 
 Transfering futures from user A to user B means that user B can use the coin/token after a specific time in the futures (like lock the coin/token). This version supports transferring the feature deal which means user B cannot use the coin/token of feature transfer from user A but user B can transfer that deal to another user (user C for example) and user C can use the coin/token from user A in the future.
 
-### Support for native event server in MongoDB.
+### Support for native event server in MongoDB
 The previous version supported the event in the message queue, kafka. This version supports MongoDB for more convenience. 
 
 The release package can be [downloaded here](https://github.com/uniworld-io/unichain-core/releases/tag/v2.0.7)  
