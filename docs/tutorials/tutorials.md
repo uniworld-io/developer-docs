@@ -37,20 +37,13 @@ sidebar_label: Tutorials
       </p>
       <!-- <p class="card__tag">[Basic]</p> -->
     </div>
-    <!-- <div class="card card-1">
-      <p class="card__title">Create URC-20 token</p>
-      <p class="card__content">create URC-20 token on UniChain network that similar to ERC-20 token on ETH</p>
-      <p class="card__apply">
-        <a class="card__link" href="./tutorial-004" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
-      </p>
-    </div>
     <div class="card card-1">
-      <p class="card__title">Play with URC-30 token</p>
-      <p class="card__content">Play with URC-30 token functions such as transfer, donate fee and more</p>
+      <p class="card__title">Use Wallet Extension</p>
+      <p class="card__content">Use wallet extension for convenient development</p>
       <p class="card__apply">
         <a class="card__link" href="./tutorial-005" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>
-    </div> -->
+    </div> 
     <div class="card card-1">
       <p class="card__title">Build your own wallet</p>
       <p class="card__content">Build your own wallet that support URC-30 token</p>

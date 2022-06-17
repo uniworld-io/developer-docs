@@ -456,13 +456,13 @@ h2 {
   .card__title {
     grid-row: 2/3;
     font-weight: 400;
-    color: #ffffff;
+    color: #363636;
     font-size: 1.5em;
   }
   .card__content {
     grid-row: 3/4;
     font-weight: 300;
-    color: #ffffff;
+    color: #474747;
     font-size: 1em;
   }
   .card__tag {
@@ -500,9 +500,22 @@ h2 {
   }
   */
   .card-1 {
+    background-image: linear-gradient(
+        45deg,
+        hsl(0deg 0% 98%) 0%,
+        hsl(344deg 0% 98%) 10%,
+        hsl(344deg 0% 98%) 23%,
+        hsl(344deg 0% 98%) 40%,
+        hsl(344deg 0% 98%) 57%,
+        hsl(344deg 0% 98%) 70%,
+        hsl(344deg 0% 98%) 80%,
+        hsl(344deg 0% 98%) 88%,
+        hsl(344deg 0% 98%) 94%,
+        hsl(0deg 0% 98%) 100%
+      );
       /* background: radial-gradient(#ff2800, #1e2405); */
       /* background: radial-gradient(#bab4b3, #383534) */
-      background: linear-gradient(90deg, #5c393a, #754744, #8e564d, #a76655, #bf785c, #d68b61, #eb9f66, #ffb56b); 
+      /* background: linear-gradient(90deg, #5c393a, #754744, #8e564d, #a76655, #bf785c, #d68b61, #eb9f66, #ffb56b);  */
       /* background: linear-gradient(90deg, #5c5c5c, #73685f, #8a7461, #a18164, #b88e66, #d09b68, #e7a86a, #ffb56b); */
   }
   /* RESPONSIVE */
