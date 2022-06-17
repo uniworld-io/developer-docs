@@ -37,7 +37,7 @@ assume that the distribution ratio is 0.2 (20%), and the votes/total_network_vot
 ```
 >wallet getreward <address>
 ```
-- By explorer: go to [explorer page](https://explorer.unichain.world) and enter the address to check
+- By explorer: go to [UniScan page](https://uniscan.world) and enter the address to check
 - By web wallet: login into [Uni Wallet](https://uniwallet.world) to check 
 
 ### Widthdraw reward
