@@ -1,11 +1,10 @@
 ---
 id: unichainToken
-title: URC Token
+title: UniChain Token
 sidebar_label: URC Token
 ---
 
 
-## UniChain Token
 
 Tokens are simply digital assets that are being built on top of the blockchain blockchain platform (for example UniChain, EOS, ETH ...). They benefit from blockchain's existing infrastructure instead of developers having to build an entirely new blockchain. Currently, UniChain supports three types of token: URC, URC-20 and URC-30. 
 - URC token is the build-in token on UniChain network, It's very easy to create with simple functions including *create token*, *transfer token* and *swap token (UNW to tokens)*. This token is mostly deprecated and replaced by URC-30
