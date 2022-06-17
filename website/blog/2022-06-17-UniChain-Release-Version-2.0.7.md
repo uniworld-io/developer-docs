@@ -4,7 +4,7 @@ authorURL: https://twitter.com/Henry_ngv
 authorImageUrl: ../../../../img/blog/identity-01.png
 ---
 
-# UniChain releases new version 2.0.4 
+# UniChain releases new version 2.0.7
 
 UniChain has released a new version 2.0.7 as the active development. There were some bugs fixed and features added to this version, including: 
 
