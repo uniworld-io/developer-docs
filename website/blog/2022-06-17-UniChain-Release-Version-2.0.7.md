@@ -41,6 +41,6 @@ The steps below describe how to upgrade UniChain to the new version
 
 If you are running a witness node, please run with witness command as normal, for example: ```java -jar unichain-core.jar –witness -p <your_private_key> ```
 
-You can also check for detailed information for network upgrade by [this link](../docs/networkUpgrade)
+You can also check for detailed information for network upgrade by [this link](../../../../docs/networkUpgrade)
 
 
