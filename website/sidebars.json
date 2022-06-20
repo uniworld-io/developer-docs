@@ -1,11 +1,12 @@
 {
     "docs": {
         "Learn About UniChain": ["welcome", "ecosystem"],
-        "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "wallet", 
+        "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "wallet",
             "witnessNode", "reward", "networkGovernance", "networkUpgrade"],
         "UNW and Token": ["unw", "unichainToken"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
+        "PosBridge": ["posIntroducing", "whatIsUniBridge","posHowDoseWork", "posTransfer", "posStarted"],
         "Community": ["unichainOpensource", "contributionGuide", "reportingVulnerabilities"],
         "Example & Demo": ["example"],
         "Archive Package": ["utils"]
