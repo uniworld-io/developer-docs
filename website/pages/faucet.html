@@ -147,7 +147,7 @@
 					grecaptcha.execute('6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx', { action: 'submit' }).then(function (token) {
 						console.log('token', token);
 						$("#response-text").text = "&nbsp;";
-						fetch('http://localhost:5100/api/v1/faucet/request-send-faucet', {
+						fetch('https://developers.unichain.world/api/v1/faucet/request-send-faucet', {
 							headers: {
 								'Accept': 'application/json',
 								'Content-Type': 'application/json'
