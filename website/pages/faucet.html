@@ -77,8 +77,8 @@
 				        </ul>
 							</span> -->
 					</div>
-					<!-- <div class="g-recaptcha" data-sitekey="6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx"
-						data-callback="submit" data-size="v3"></div> -->
+					<div class="g-recaptcha" data-sitekey="6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx"
+						data-callback="submit" data-size="invisible"></div>
 					<!-- <button class="g-recaptcha" data-sitekey="6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx"
 						data-callback='onSubmit' data-action='submit'>Submit</button> -->
 				</div>
@@ -138,34 +138,43 @@
 			}
 		};
 
-		var requestFaucet = function (captcha, receiver, type) {
+		var requestFaucet = function () {
 			if (document.getElementById('faucet-address').value.length === 0) {
 				$("#response-text").text('Invalid UniChain address');
+				$("#response-text").css({ "color": "red" });
 			} else {
-				$("#response-text").text = "&nbsp;";
-				fetch('http://localhost:5100/api/v1/faucet/request-send-faucet', {
-					headers: {
-						'Accept': 'application/json',
-						'Content-Type': 'application/json'
-					},
-					method: "POST",
-					body: JSON.stringify({
-						to: document.getElementById('faucet-address').value,
-						type: 'UNW',
-						amount: 10
-					}),
-				})
-					.then(response => response.json())
-					.then(res => {
-						console.log('res===', res);
-						$("#faucet-address").val('');
-						$("#response-text").css({ "color": "#00C850" });
-						$("#response-text").text(res.msg);
-					})
-					.catch(err => {
-						console.log('err', err);
-						$("#response-text").text('Fail to faucet');
+				grecaptcha.ready(function () {
+					grecaptcha.execute('6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx', { action: 'submit' }).then(function (token) {
+						console.log('token', token);
+						$("#response-text").text = "&nbsp;";
+						fetch('http://localhost:5100/api/v1/faucet/request-send-faucet', {
+							headers: {
+								'Accept': 'application/json',
+								'Content-Type': 'application/json'
+							},
+							method: "POST",
+							body: JSON.stringify({
+								to: document.getElementById('faucet-address').value,
+								type: 'UNW',
+								amount: 10,
+								reCaptcha: token
+							}),
+						})
+							.then(response => response.json())
+							.then(res => {
+								if (!res?.error) {
+									$("#faucet-address").val('');
+									$("#response-text").css({ "color": "#00C850" });
+								}
+								$("#response-text").text(res.msg);
+							})
+							.catch(err => {
+								console.log('err', err);
+								$("#response-text").text('Fail to faucet');
+								$("#response-text").css({ "color": "red" });
+							});
 					});
+				});
 			}
 		}
 		/*
@@ -274,10 +283,9 @@
 		}, 1000);
 
 
-		reconnect();
+		//reconnect();
 	</script>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lf0vXQgAAAAAJsvvp8gYrVbGCqSV488I6RuTcVx"></script>
 </body>
 
 </html>
