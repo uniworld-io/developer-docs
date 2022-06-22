@@ -28,7 +28,7 @@ function getRandomKey () {
 }
 
 ```
-To generate a unichain address from a private key, We’ll need to use the help from Unichain-js. Setup Unichain js on the web is very simple
+To generate a unichain address from a private key, We’ll need to use the help from Unichain-js. Config Unichain js on the web is very simple
 ```js
 <script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.8/dist/UnichainJS.js"></script>
 function setupUichainJS () {

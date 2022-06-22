@@ -1,6 +1,6 @@
 ---
 id: tutorial-002
-title: Setup UniChain-JS library
+title: Config UniChain-JS library
 ---
 
 __Unichain JS__ is the javascript library to interact with UniChain network. It's similar to web3js on Ethereum. UniChain JS can be run on both web browser and server side (nodejs)

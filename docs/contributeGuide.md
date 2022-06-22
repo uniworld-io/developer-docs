@@ -6,7 +6,7 @@ sidebar_label: Contribution Guide
 
 ## Contribute to UniChain Core
 
-To contribute to UniChain Core, ensure that you have the latest version of the codebase. To setup UniChain Core with all the necessary dependencies for linting, testing, and building, run the following:
+To contribute to UniChain Core, ensure that you have the latest version of the codebase. To setConfig UniChain Core with all the necessary dependencies for linting, testing, and building, run the following:
 
 ```
 $ git clone https://github.com/uniworld-io/unichain-core.git

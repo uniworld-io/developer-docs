@@ -131,7 +131,7 @@ The mobile application must be updated with:
 
 Procedures:
 - Check if your Node.js version is >= 14.
-- Setup [development environment](https://reactnative.dev/docs/environment-setup)
+- Config [development environment](https://reactnative.dev/docs/environment-setConfig)
 - Clone [this repository](https://github.com/uniworld-io/tutorials/tree/master/mobile-wallet-template)
 - Run ```npm install``` or yarn to install the dependencies.
 - With iOS, run ```cd ios && pod install``` to install podfile

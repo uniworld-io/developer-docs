@@ -7,7 +7,7 @@ sidebar_label: Example & Demo
 In this page, We will guide you how to work with UniChain using UniChain-Js. The examples and functions below may be suitable for creating a wallet or working with exchanges. 
 
 ## Prepare Environment
-- Setup UniChain local nodes . Refer [this link](./getStarted), or simply run the following commands
+- Config UniChain local nodes . Refer [this link](./getStarted), or simply run the following commands
 ```
 java -jar unichain-core.jar
 java -jar relay-node.jar

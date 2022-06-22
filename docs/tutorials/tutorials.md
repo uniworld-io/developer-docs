@@ -22,8 +22,8 @@ sidebar_label: Tutorials
       <!-- <p class="card__tag">[Medium]</p> -->
     </div>
     <div class="card card-1">
-      <p class="card__title">Setup Unichain-js library</p>
-      <p class="card__content">Setup Unichain-js lirary to interact with Unichain network</p>
+      <p class="card__title">Config Unichain-js library</p>
+      <p class="card__content">Config Unichain-js lirary to interact with Unichain network</p>
       <p class="card__apply">
         <a class="card__link" href="./tutorial-002" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
       </p>

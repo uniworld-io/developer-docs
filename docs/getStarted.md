@@ -1,6 +1,6 @@
 ---
 id: getStarted
-title: Setup environment
+title: Config environment
 ---
 
 ## Run UniChain Mainet Node

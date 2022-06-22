@@ -1,5 +1,5 @@
 ## How to Get Started With Uni PoBridge
-### 1. Setup wallet
+### 1. Config wallet
 First make sure you have [metamask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) and [uniwallet](https://chrome.google.com/webstore/detail/uniwallet/glifbmajcmgbjkeklllabmmpbgecnmnn?hl=vi) wallet installed.
 
 The next step is to create a wallet address on metamask and uniwallet, if you already have a wallet address, you can skip this step.

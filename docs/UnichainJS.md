@@ -13,7 +13,7 @@ _Note: This document is based on version 1.0.8_
 ```
 npm install @uniworld/unichain-js
 ```
-### Setup UniChain JS on web browser
+### Config UniChain JS on web browser
 ```
 <script src="https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.8/dist/UnichainJS.js"></script>
 ```

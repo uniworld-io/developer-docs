@@ -28,7 +28,7 @@ __Prepare environment__
 - To run wallet-cli and witness node, Java environment must be set. Follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04) to set up environment. If you you have issues on setting up Java, follow this shortcut:
     - Download Oracle Java from [Oracle Download page](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html), chose the right package according to your OS. For example: jdk-8u202-linux-x64.tar.gz
     - Unzip the file to any location, for example: ```sudo tar -C /opt/ -zxvf jdk-8u202-linux-x64.tar.gz```
-    - The file is now unzip to `/otp/jdk1.8.0_202` folder, lets add the PATH to `~/.bashrc` file by adding this line `export PATH=/otp/jdk1.8.0_202/bin/:$PATH` then run the `source ~/.bashrc` command. You can check the setup by running the command `java -version`
+    - The file is now unzip to `/otp/jdk1.8.0_202` folder, lets add the PATH to `~/.bashrc` file by adding this line `export PATH=/otp/jdk1.8.0_202/bin/:$PATH` then run the `source ~/.bashrc` command. You can check the setConfig by running the command `java -version`
 - Download the [UniChain Node](https://github.com/uniworld-io/unichain-core/releases/download/v1.0.1/unichain-core.jar) and [wallet-cli](https://github.com/uniworld-io/wallet-cli/releases/download/v1.0.1/wallet-cli.jar). If you are using other OS than Linux (Ubuntu), please try building execution file from [source code](https://github.com/uniworld-io)
 
 __Create witness account__
