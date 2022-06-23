@@ -926,10 +926,10 @@ $ curl -X POST  http://{host}/walletsolidity/getfuturetoken -d
 
 ###
 ## URC20 Native Token
-### Create new Urc20 token contract
+### Create new URC20 token contract
 - Path: /urc20createcontract
 - Method: POST
-- Description: Create new Urc20 contract
+- Description: Create new URC20 contract
 - Params and data example:
 ```
 curl --location --request POST 'http://{host}/urc20createcontract' \
@@ -960,7 +960,7 @@ curl --location --request POST 'http://{host}/urc20createcontract' \
 }'
  ```
 
-### Transfer Urc20 token
+### Transfer URC20 token
 - Path: /urc20transfer
 - Method: POST
 - Description: Transfer token to other account
@@ -978,7 +978,7 @@ curl --location --request POST 'http://{host}/urc20transfer' \
 }'
  ```
 
-### Transfer from Urc20 token
+### Transfer from URC20 token
 - Path: /urc20transferfrom
 - Method: POST
 - Description: Moves amount tokens from sender to recipient using the allowance mechanism. amount is then deducted from the caller’s allowance.
@@ -996,7 +996,7 @@ curl --location --request POST 'http://{host}/urc20transferfrom' \
 }'
  ```
 
-### Approve Urc20 token 
+### Approve URC20 token 
 - Path: /urc20approve
 - Method: POST
 - Description: Emitted when the allowance of a spender for an owner is set by a call to approve. value is the new allowance.
@@ -1012,7 +1012,7 @@ curl --location --request POST 'http://{host}/urc20approve' \
 }'
  ```
 
-### Contribute Urc20 token to pool fee
+### Contribute URC20 token to pool fee
 - Path: /urc20contributepoolfee
 - Method: POST
 - Description: Contribute token to a pool fee 
@@ -1027,10 +1027,10 @@ curl --location --request POST 'http://{host}/urc20contributepoolfee' \
 }'
  ```
 
-### Update parameters Urc20 token contract
+### Update parameters URC20 token contract
 - Path: /urc20updateparams
 - Method: POST
-- Description: Update parameters of Urc20 contract
+- Description: Update parameters of URC20 contract
 - Params and data example:
 ```
 curl --location --request POST 'http://{host}/urc20updateparams' \
@@ -1050,7 +1050,7 @@ curl --location --request POST 'http://{host}/urc20updateparams' \
 }'
  ```
 
-### Mint Urc20 token 
+### Mint URC20 token 
 - Path: /urc20mint
 - Method: POST
 - Description: Mint new amount of token
@@ -1066,7 +1066,7 @@ curl --location --request POST 'http://{host}/urc20mint' \
 }'
  ```
 
-### Burn Urc20 token 
+### Burn URC20 token 
 - Path: /urc20burn
 - Method: POST
 - Description: Burn token
@@ -1081,7 +1081,7 @@ curl --location --request POST 'http://{host}/urc20burn' \
 }'
  ```
 
-### Withdraw Urc20 token in future 
+### Withdraw URC20 token in future 
 - Path: /urc20withdrawfuture
 - Method: POST
 - Description: Withdraw locked deal in the future
@@ -1095,7 +1095,7 @@ curl --location --request POST 'http://{host}/urc20withdrawfuture' \
 }'
  ```
 
-### Transfer owner of Urc20 token 
+### Transfer owner of URC20 token 
 - Path: /urc20transferowner
 - Method: POST
 - Description: Transfer owner of a token to new address
@@ -1110,7 +1110,7 @@ curl --location --request POST 'http://{host}/urc20transferowner' \
 }'
  ```
 
-### Exchange Urc20 token 
+### Exchange URC20 token 
 - Path: /urc20exchange
 - Method: POST
 - Description: Exchange token to other address
@@ -1125,7 +1125,7 @@ curl --location --request POST 'http://{host}/urc20exchange' \
 }'
  ```
 
-### List Urc20 token contracts 
+### List URC20 token contracts 
 - Path: /urc20contractlist
 - Method: GET
 - Description: Get list of contracts
@@ -1134,7 +1134,7 @@ curl --location --request POST 'http://{host}/urc20exchange' \
 curl --location --request GET 'http://{host}/urc20contractlist?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3&symbol=UNW&page_size=1&page_index=1'
  ```
 
-### Get future deal of Urc20 token 
+### Get future deal of URC20 token 
 - Path: /urc20futureget
 - Method: GET
 - Description: Get information of a future deal
@@ -1143,7 +1143,7 @@ curl --location --request GET 'http://{host}/urc20contractlist?address=4422b7ec0
 curl --location --request GET 'http://{host}/urc20futureget?owner_address=4422b7ec06542e524db6045a41cc767bd83db3dbc3&address=UikVt2k4YfmkrDyp7cnJxKxVdz7sjsd5cN&page_size=1&page_index=1'
  ```
 
-### Get Urc20 token name 
+### Get URC20 token name 
 - Path: /urc20name
 - Method: GET
 - Description: Get name of a token by address
@@ -1152,7 +1152,7 @@ curl --location --request GET 'http://{host}/urc20futureget?owner_address=4422b7
 curl --location --request GET 'http://{host}/urc20name?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Get Urc20 token symbol 
+### Get URC20 token symbol 
 - Path: /urc20symbol
 - Method: GET
 - Description: Get symbol of a token by address
@@ -1161,7 +1161,7 @@ curl --location --request GET 'http://{host}/urc20name?address=4422b7ec06542e524
 curl --location --request GET 'http://{host}/urc20symbol?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Get Urc20 token decimals 
+### Get URC20 token decimals 
 - Path: /urc20decimals
 - Method: GET
 - Description: Get decimals of a token by address
@@ -1170,7 +1170,7 @@ curl --location --request GET 'http://{host}/urc20symbol?address=4422b7ec06542e5
 curl --location --request GET 'http://{host}/urc20decimals?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Get total supply of Urc20 token 
+### Get total supply of URC20 token 
 - Path: /urc20totalsupply
 - Method: GET
 - Description: Get total supply of a token by address
@@ -1179,7 +1179,7 @@ curl --location --request GET 'http://{host}/urc20decimals?address=4422b7ec06542
 curl --location --request POST 'http://{host}/urc20totalsupply?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Get Urc20 balance 
+### Get URC20 balance 
 - Path: /urc20balanceof
 - Method: GET
 - Description: Get balance token of an address
@@ -1188,7 +1188,7 @@ curl --location --request POST 'http://{host}/urc20totalsupply?address=4422b7ec0
 curl --location --request GET 'http://{host}/urc20balanceof?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Get owner of Urc20 token 
+### Get owner of URC20 token 
 - Path: /urc20getowner
 - Method: GET
 - Description: Get owner of an address
@@ -1197,7 +1197,7 @@ curl --location --request GET 'http://{host}/urc20balanceof?address=4422b7ec0654
 curl --location --request GET 'http://{host}/urc20getowner?address=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
-### Allowance Urc20 token 
+### Allowance URC20 token 
 - Path: /urc20allowance
 - Method: POST
 - Description: Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through transferFrom.
@@ -1213,11 +1213,11 @@ curl --location --request POST 'http://{host}/urc20allowance' \
  ```
 
 ###
-## URC721 Token
-### Create new Urc721 contract
+## URC721 Native Token
+### Create new URC721 contract
 - Path: /urc721createcontract
 - Method: POST
-- Description: Create new Urc721 contract. A model has created for generate token from itself.
+- Description: Create new URC721 contract. A model has created for generate token from itself.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721createcontract' \
@@ -1232,10 +1232,10 @@ curl --location --request POST 'http://{host}/urc721createcontract' \
 }'
  ```
 
-### Add minter for Urc721 contract
+### Add minter for URC721 contract
 - Path: /urc721addminter
 - Method: POST
-- Description: Add minter of an existed Urc721 contract.
+- Description: Add minter of an existed URC721 contract.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721addminter' \
@@ -1247,10 +1247,10 @@ curl --location --request POST 'http://{host}/urc721addminter' \
 }'
  ```
 
-### Remove minter of an existed Urc721 contract
+### Remove minter of an existed URC721 contract
 - Path: /urc721removeminter
 - Method: POST
-- Description: Remove minter of an existed Urc721 contract.
+- Description: Remove minter of an existed URC721 contract.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721removeminter' \
@@ -1261,7 +1261,7 @@ curl --location --request POST 'http://{host}/urc721removeminter' \
 }'
  ```
 
-### Renounce minter of Urc721 token
+### Renounce minter of URC721 token
 - Path: /urc721renounceminter
 - Method: POST
 - Description: An address has assigned minter of contract that can refuse.
@@ -1275,7 +1275,7 @@ curl --location --request POST 'http://{host}/urc721renounceminter' \
 }'
  ```
 
-### Mint Urc721 token
+### Mint URC721 token
 - Path: /urc721mint
 - Method: POST
 - Description: This creates token from contract template.
@@ -1292,10 +1292,10 @@ curl --location --request POST 'http://{host}/urc721mint' \
 }'
  ```
 
-### Burn Urc721 token
+### Burn URC721 token
 - Path: /urc721burn
 - Method: POST
-- Description: Remove an Urc721 token by id.
+- Description: Remove an URC721 token by id.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721burn' \
@@ -1307,7 +1307,7 @@ curl --location --request POST 'http://{host}/urc721burn' \
 }'
  ```
 
-### Approve Urc721 token
+### Approve URC721 token
 - Path: /urc721approve
 - Method: POST
 - Description: Approve an address for Urc21 token, so it can do transfer, burn ... operation.
@@ -1324,10 +1324,10 @@ curl --location --request POST 'http://{host}/urc721approve' \
 }'
  ```
 
-### Approve all Urc721 token
+### Approve all URC721 token
 - Path: /urc721setapprovalforall
 - Method: POST
-- Description: Approve all Urc721 token of owner to other address, so the address can do transfer, burn ... operation on all Urc721 token of the owner.
+- Description: Approve all URC721 token of owner to other address, so the address can do transfer, burn ... operation on all URC721 token of the owner.
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721setapprovalforall' \
@@ -1340,10 +1340,10 @@ curl --location --request POST 'http://{host}/urc721setapprovalforall' \
 }'
  ```
 
-### Transfer from Urc721 token
+### Transfer from URC721 token
 - Path: /urc721transferfrom
 - Method: POST
-- Description: Transfer Urc721 token to other address. 
+- Description: Transfer URC721 token to other address. 
 - Params and data example:
  ```
 curl --location --request POST 'http://{host}/urc721transferfrom' \
@@ -1356,110 +1356,110 @@ curl --location --request POST 'http://{host}/urc721transferfrom' \
 }'
  ```
 
-### Get balance of Urc721 token
+### Get balance of URC721 token
 - Path: /urc721balanceof
 - Method: GET
-- Description: Get total Urc721 token by owner
+- Description: Get total URC721 token by owner
 - Params and data example:
  ```
  curl --location --request GET 'http://{host}/urc721balanceof?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=442fc353c683247d30a0165cb73329892d3c7f9f17'
  ```
 
-### Get name of Urc721 token
+### Get name of URC721 token
 - Path: /urc721name
 - Method: GET
-- Description: Get Urc721 token name by address
+- Description: Get URC721 token name by address
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721name?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### Get symbol of Urc721 token
+### Get symbol of URC721 token
 - Path: /urc721symbol
 - Method: GET
-- Description: Get Urc721 token symbol by address
+- Description: Get URC721 token symbol by address
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721symbol?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### Get uri of Urc721 token
+### Get uri of URC721 token
 - Path: /urc721tokenuri
 - Method: GET
-- Description: Get Urc721 token URI by address and token_id
+- Description: Get URC721 token URI by address and token_id
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721tokenuri?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
  ```
 
-### Get total supply of Urc721 token
+### Get total supply of URC721 token
 - Path: /urc721totalsupply
 - Method: GET
-- Description: Get Urc721 total supply by address
+- Description: Get URC721 total supply by address
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721totalsupply?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e'
  ```
 
-### Get owner of an Urc721 token
+### Get owner of an URC721 token
 - Path: /urc721ownerof
 - Method: GET
-- Description: Find owner of Urc721 token with address and id
+- Description: Find owner of URC721 token with address and id
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721ownerof?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
  ```
 
-### Get Urc721 approved token
+### Get URC721 approved token
 - Path: /urc721getapproved
 - Method: GET
-- Description: Get Urc721 approved token with address and id
+- Description: Get URC721 approved token with address and id
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721getapproved?address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&id=12345'
  ```
 
-### Check if Urc721 token is approved for all
+### Check if URC721 token is approved for all
 - Path: /urc721isapprovedforall
 - Method: GET
-- Description: Check if Urc721 token is approved for all
+- Description: Check if URC721 token is approved for all
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721isapprovedforall?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=442fc353c683247d30a0165cb73329892d3c7f9f17&operator=4422b7ec06542e524db6045a41cc767bd83db3dbc3'
  ```
 
 
-### List Urc721 contracts
+### List URC721 contracts
 - Path: /urc721contractlist
 - Method: GET
-- Description: Get list contracts of Urc721 
+- Description: Get list contracts of URC721 
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721contractlist?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&page_size=1&page_index=1&owner_type=owner'
  ```
 
-### List Urc721 token
+### List URC721 token
 - Path: /urc721tokenlist
 - Method: GET
-- Description: Get list of Urc721 token 
+- Description: Get list of URC721 token 
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721tokenlist?owner_address=44ee39d5d97b1ebf4c12860db9297fcf52930ba72e&address=44276adef944a4b1dd7c99cd68752e7d671954838f&page_index=0&page_size=5&owner_type=owner'
  ```
 
-### Urc721 contract info
+### URC721 contract info
 - Path: /urc721contractget
 - Method: GET
-- Description: Get Urc721 contract info
+- Description: Get URC721 contract info
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721contractget?address=44276adef944a4b1dd7c99cd68752e7d671954838f'
  ```
 
-### Urc721 token info
+### URC721 token info
 - Path: /urc721tokenget
 - Method: GET
-- Description: Get Urc721 token info
+- Description: Get URC721 token info
 - Params and data example:
  ```
 curl --location --request GET 'http://{host}/urc721tokenget?address=44276adef944a4b1dd7c99cd68752e7d671954838f&id=123'
