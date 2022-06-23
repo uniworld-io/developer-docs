@@ -3,7 +3,7 @@
         "Learn About UniChain": ["welcome", "ecosystem"],
         "UniChain Protocol": ["overview", "keyConcept", "accountAndAddress", "wallet",
             "witnessNode", "reward", "networkGovernance", "networkUpgrade"],
-        "UNW and Token": ["unw", "unichainToken"],
+        "UNW and Tokens": ["unw", "urc20token", "urc30nativetoken", "urc20nativetoken", "urc721nativetoken"],
         "Get Started": ["getStarted", "runLocalNetwork"],
         "Smart Contract": ["yourFirstSmartContract", "deploySmartContract", "interactWithSmartContract"],
         "PosBridge": ["posIntroducing", "whatIsUniBridge","posHowDoseWork", "posTransfer", "posStarted"],
