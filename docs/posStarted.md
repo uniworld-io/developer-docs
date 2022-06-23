@@ -10,7 +10,7 @@ First make sure you have [metamask](https://chrome.google.com/webstore/detail/me
 The next step is to create a wallet address on metamask and uniwallet, if you already have a wallet address, you can skip this step.
 
 ### 2. Connect wallet
-Please visit [Uni PosBridge](https://posbridge.unichain.world/).
+Please visit [Uni PosBridge](https://testnet.unibridge.world/).
 
 Next choose network and connect your wallet: 
 ![pos_connect_wallet](../img/pos_connect_wallet.png)
