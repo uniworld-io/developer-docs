@@ -36,7 +36,7 @@ UniChain, It’s an ecosystem.
 </details>
 
 <details>
-  <summary>__3. What is UniChain smart contract languague?__</summary>
+  <summary>__3. What is UniChain smart contract language?__</summary>
 UniChain use Solidity as the primary smart contract language. The smart contracts written in UniChain are compatible with Ethereum and Tron. If you have your Dapps on ETH and Tron, You can also deploy on UniChain network.
 </details>
 
@@ -60,7 +60,7 @@ Currently, We support LevelDB and RockDB. LevelDB is the default engine. We are 
 <summary>__7. Why DPOS Hotstuff is chosen as a consensus mechanism?__</summary>
 DPOS and Hotstuff are two popular consensus algorithms that are already used in other blockchain networks such as EOS, Facebook Libra.
 We, UniChain, are not the one who create these algorithms but the first one who combines the advantages of both.
-DPOS removes the energy waste from the PoW algorithm. It works based on community power (vote). Noone can control the network.
+DPOS removes the energy waste from the PoW algorithm. It works based on community power (vote). No one can control the network.
 In traditional DPOS (with BFT) (that is used in EOS), the communication in the network is the star topology which is O(n3)complexity. Our approach reduce to nearly linear model: O(n)
 DPOS Hotstuff help our network faster, more scalable and security
 Combining DPOS Hotstuff also help block finalized after 1 block
@@ -70,7 +70,7 @@ Combining DPOS Hotstuff also help block finalized after 1 block
 <summary>__8. Can you explain how blocks are produced in the UniChain network?__</summary>
 Blocks are produced intervally. Currently, It is set to 1 second, but depends on network conditions such as high latency or unstable state ..., It may increase (ex: 3 seconds).
 Witnesses are responsible for transaction validation and block creation. 
-For every interval, the are two process: (1) produce block, (2) prepare for next producer (running the random witness in the next phase to produce block based on random algorithm that described in Whitepaper) 
+For every interval, there are two process: (1) produce block, (2) prepare for next producer (running the random witness in the next phase to produce block based on random algorithm that described in Whitepaper) 
 After transactions are validated, the current witness packages all transactions into block, signs to block use its private key and broadcast information to the network.
 </details>
 
@@ -92,12 +92,12 @@ By using side chain architecture, UniChain can improve the transaction per secon
 There are many ways to protect spammers such as:
 - Limit the connection and request from an IP address
 - Transaction fees: If someone spams the network, they must have to pay for transaction fees which cost them in real $. 
-- Each transaction is validate carefully before adding to block
+- Each transaction is validated carefully before adding to block
 </details>
 
 <details>
 <summary>__12. Are UniChain network parameters fixed or flexible?__</summary>
-Most Unichain network parameters are flexible. It mean that committee/witness can change parameters 
+Most Unichain network parameters are flexible. It means that committee/witness can change parameters 
 To change network params, committee/witness create a proposal then broadcast to all networks. If the proposal receives enough vote from others committees/witnesses then the network parameter will be changed in the next maintenance time
 </details>
 

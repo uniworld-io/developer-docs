@@ -37,7 +37,7 @@ unichain.isConnected((err, data) => {
 ```
 
 ## Utility Functions
-You can check more utility functions in [this link](./UnichainJS). The codes below demostrate on how to create wallet, send UNW coin and load the transaction history ... in NodeJS
+You can check more utility functions in [this link](./UnichainJS). The codes below demonstrate on how to create wallet, send UNW coin and load the transaction history ... in NodeJS
 
 ### Example for wallet functions
 
@@ -301,4 +301,4 @@ Result:
 }
 ```
 
-Results above can be used for crawling data from blockchain. It may useful for exchange or bock explorer.
+Results above can be used for crawling data from blockchain. It may be useful for exchange or bock explorer.

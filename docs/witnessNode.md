@@ -5,14 +5,14 @@ sidebar_label: Witness Node
 ---
 
 ### What is a witness 
-Witness is a special account on UniChain network. Witnesses play an important role in UniChain network. Witnesses maintance and secure the ledger, validate transactions, produce blocks and manage the chain parameters, network configurations.
+Witness is a special account on UniChain network. Witnesses play an important role in UniChain network. Witnesses maintenance and secure the ledger, validate transactions, produce blocks and manage the chain parameters, network configurations.
 UniChain has 55 witness nodes in total. 33 active witness nodes continuously validate transaction, produce block and maintain the network. 22 other witness nodes are in standby status which ready to replace any active witness nodes if they can not function (ex: can not produce block after a specific of time).
 Witness nodes are selected from any account in the network through an election process. To become a UniChain witness, one must follow the below steps
 - Register an account in UniChain network
 - Deposit at least 1000 UNW into account
 - Persuade other accounts (community) for their votes
 Election will refresh after every 6 hours. The top 55 accounts which receive the most votes will become UniChain witnesses.
-Please note that after applying for a witness, 1000 UNW will immediately burnt. This action is to protect network from spammers.
+Please note that after applying for a witness, 1000 UNW will immediately be burnt. This action is to protect network from spammers.
 
 ### How to become a witness
 To apply for witness, You can either use the [UniTool](https://utools.unichain.world) or wallet-cli.The following tutorial guide you how to become a witness node using wallet-cli 
@@ -20,12 +20,12 @@ To apply for witness, You can either use the [UniTool](https://utools.unichain.w
 _Hardware requirement_
 - At least 8 CPU, 16G Ram, 250 GB SSD/HDD
 - OS: Linux base: Ubuntu, Redhat, Centos ...(in this tutorial, We use Ubuntu 16.04)
-- Static public IP address. High speed network bandwith.
+- Static public IP address. High speed network bandwidth.
 
 This tutorial assumes that you are running wallet-cli and witness node at the same server above.
 
 __Prepare environment__
-- To run wallet-cli and witness node, Java environment must be set. Follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04) to set up environment. If you you have issues on setting up Java, follow this shortcut:
+- To run wallet-cli and witness node, Java environment must be set. Follow [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04) to set up environment. If you have issues on setting up Java, follow this shortcut:
     - Download Oracle Java from [Oracle Download page](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html), chose the right package according to your OS. For example: jdk-8u202-linux-x64.tar.gz
     - Unzip the file to any location, for example: ```sudo tar -C /opt/ -zxvf jdk-8u202-linux-x64.tar.gz```
     - The file is now unzip to `/otp/jdk1.8.0_202` folder, lets add the PATH to `~/.bashrc` file by adding this line `export PATH=/otp/jdk1.8.0_202/bin/:$PATH` then run the `source ~/.bashrc` command. You can check the setConfig by running the command `java -version`
@@ -71,13 +71,13 @@ wallet> CreateWitness UenUvV4Yn8qA1af2u4bKCBCV1PVUrGAjLB "http://your-witness-we
 ```
 Confirm transaction and input your account password.
 
-You are witness candidate now. All you need to do is to pursuade community for the votes. You can also vote for yourself. To get the vote and vote for witness node, you must lock your balance. The voting power will be equal to the number of UNW you lock
+You are witness candidate now. All you need to do is to persuade community for the votes. You can also vote for yourself. To get the vote and vote for witness node, you must lock your balance. The voting power will be equal to the number of UNW you lock
 
 ```
 wallet> FreezeBalance 100000000 3 0
 
 ```
-The example above lock 100 UNW (100 UNW = 100.000.000 Ginza) within 3 days and resouce type is BANDWIDTH. You have 100 voting power now and you can vote for any witness in the network
+The example above lock 100 UNW (100 UNW = 100.000.000 Ginza) within 3 days and resource type is BANDWIDTH. You have 100 voting power now, and you can vote for any witness in the network
 ```
 wallet> VoteWitness UenUvV4Yn8qA1af2u4bKCBCV1PVUrGAjLB 100
 

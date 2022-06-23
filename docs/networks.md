@@ -7,7 +7,7 @@ sidebar_label: Networks
 ### UniChain Network
 Account is a unique identity on UniChain network. Each account has its  own key pair. The address is an account representation on Blockchain and is generated from private key.
 Account has many attributes such as UNW balance, Token balance, voting power, resources ...
-Account can only be created by another existed account or by transfering the coin/token to account address.
+Account can only be created by another existed account or by transferring the coin/token to account address.
 Create account using wallet-cli example
 ```
 wallet> CreateAccount UenUvV4Yn8qA1af2u4bKCBCV1PVUrGAjLB
@@ -50,7 +50,7 @@ The utility functions below will generate the address from your private key. You
 </div>
 <script src="../js/UnichainJS.js"></script>
 <script type="text/javascript">
-    function randomeHex () {
+    function randomHex () {
         const hexChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
         const min = 0, max = hexChar.length - 1
         let key = ''
@@ -73,7 +73,7 @@ The utility functions below will generate the address from your private key. You
             }
         }
         if (!privateKey) {
-            privateKey = randomeHex()
+            privateKey = randomHex()
             document.getElementById("privateKey").value = privateKey
         }
         document.getElementById("address").value = UnichainJS.address.fromPrivateKey(privateKey)

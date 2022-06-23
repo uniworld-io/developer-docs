@@ -49,7 +49,7 @@ Web wallet extension is designed for end-users to interact with Dapp from the br
 ![Uniwallet extension](../img/uniwallet-extension.png)
 
 ### Technical note
-Users can use one of the abow wallets or use all of them. The private key is compatible for all wallets, however, the mnemonic word phrases may be different.
+Users can use one of the above wallets or use all of them. The private key is compatible for all wallets, however, the mnemonic word phrases may be different.
  
 The mobile and web wallet are mono style and support 24 mnemonic word phrases while the wallet extension can be HD wallet (multiple account address) and support for 12 mnemonic word phrases. Recovery wallet by keystore file is available on web wallet, wallet cli and wallet extension.
 
@@ -81,10 +81,10 @@ const privateKey = child.privateKey.toString('hex')
 const address = Unichain.address.fromPrivateKey(privateKey)
 
 ```
-The code above generates address at _index 0_, We can get many other account addresses with same mnemonic words by deriving the account path. The path will be _`m/44'/968'/${index}'/0/0`_ , where _${index}_ is the account index and 968 is the coin type of UNW which is registered in slip-0044 reposistory.
+The code above generates address at _index 0_, We can get many other account addresses with same mnemonic words by deriving the account path. The path will be _`m/44'/968'/${index}'/0/0`_ , where _${index}_ is the account index and 968 is the coin type of UNW which is registered in slip-0044 repository.
 checkout here __[https://github.com/satoshilabs/slips/blob/master/slip-0044.md](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)__ 
 
-The walle keystore file follows the Ethereum keystore file standard and looks like this: 
+The wallet keystore file follows the Ethereum keystore file standard and looks like this: 
 ```
 UTC--2022-04-08T02_32_03.188Z--UiePeLF7cixhJ7iwf3s6QpAmGE4WnKRtGa
 ```

@@ -7,7 +7,7 @@ sidebar_label: Non-Fungible Token
 
 ## UniChain Token
 
-Tokens are simply digital assets that are being built on top of the blockchain blockchain platform (for example UniChain, EOS, ETH ...). They benefit from blockchain's existing infrastructure instead of developers having to build an entirely new blockchain. Currently, UniChain supports three types of token: URC, URC-20 and URC-30. 
+Tokens are simply digital assets that are being built on top of the blockchain platform (for example UniChain, EOS, ETH ...). They benefit from blockchain's existing infrastructure instead of developers having to build an entirely new blockchain. Currently, UniChain supports three types of token: URC, URC-20 and URC-30. 
 - URC token is the build-in token on UniChain network, It's very easy to create with simple functions including *create token*, *transfer token* and *swap token (UNW to tokens)*. This token is mostly deprecated and replaced by URC-30
 - URC-20 token is the extension of UNC token. User's can defined more business logics by using the smart contract system (for example: lock the token, transfer with condition ...). 
 - URC-30 token is native token build on top of UVM so that users can create, transfer, exchange ... seamlessly without any smart contracts. 
@@ -35,7 +35,7 @@ interface IURC20 {
 Please go to smart contract session to learn how to write and deploy smart contract on UniChain network.
 
 ## URC-30 token
-URC-30 token is the native token on UniChain network. It has the same function as the URC-20 token but the big difference is that It does not based on smart contracts. Users can interact with the token by using APIs from blockchain nodes. Unlike URC-20 token, transferring URC-30 token does not require UNW as the transaction fee (gas). Instead, the transaction fee is from the token itself. 
+URC-30 token is the native token on UniChain network. It has the same function as the URC-20 token but the big difference is that It is not based on smart contracts. Users can interact with the token by using APIs from blockchain nodes. Unlike URC-20 token, transferring URC-30 token does not require UNW as the transaction fee (gas). Instead, the transaction fee is from the token itself. 
 The following picture describes how the transaction fee model in URC-30 works.
 
 ![URC-30 token fee](../img/urc30_token_fee.png) 
@@ -66,24 +66,24 @@ Users can issue URC-30 tokens by using wallet-cli, APIs, SDK ... but the simples
   <li>Step 1: Go to UniWallet website</li>
   <li>Step 2: Login to your wallet</li>
   <li>Step 3: Navigate to the Token Tool on the left panel and fill the token information</li>
-  <li>Step 4: Sumbit and input your wallet password. A txid will be returned if everything is OK  </li>
+  <li>Step 4: Submit and input your wallet password. A txid will be returned if everything is OK  </li>
 </ul>
 
 ![Create URC-30 Token](../img/create_urc30_token.png) 
 
 The following describes the token params in details
 
-- Token Name: The name of the token. The name must be unique, less than 32 human readable characters.
-- Abbr: Abbreviation of the token, Abbr should less than 32 human readable characters
+- Token Name: The name of the token. The name must be unique, less than 32 human-readable characters.
+- Abbr: Abbreviation of the token, Abbr should less than 32 human-readable characters
 - Total supply: Total supply is the supply at the token creation. It should be integer number with the range from 1 to 2^63 - 1
 - Max supply: The maximum supply of the token. It should be integer number with the range from 1 to 2^63 -1 
 - Start time: Start time is the time that token can be used. Token can be issued for future uses. - Date and time are from UTC timezone. The default value is now (token can be used after creation)
 - End time: End time is the time that token cannot be used. The default value is 50 years and maximum value is 200 years (from now)
 - Url: the url to website or information of token creators. 
-- Extra fee rate: The extra fee rate is the transaction fee calculated in percentage of transferred amount. For example, if the extra fee rate is 1%, when transferring  100 token X from user A to user B, there will be 100 token X transferred from A to B, 1 token X will be transferred to the token creator. Value range of extra fee is from 0 - 100
-- Fee: The transaction fee for transferring a token regardless of token amount. Please note that the token transaction fee of transferring a token will be transaction fee and extra fee.  For example, if the fee is set to 2, the extra fee rate is set to 1%. The total transaction fee when transfering 100 token X will be 2 + 1% * 100 = 3 token X, total token subtracted  from source account will be 100 token X, token owner receives 3 token X fee, target account receives 97 token X.
+- Extra fee rate: The extra fee rate is the transaction fee calculated in percentage of transferred amount. For example, if the extra fee rate is 1%, when transferring  100 token X from user A to user B, there will be 100 token X transferred from A to B, 1 token X will be transferred to the token creator. Value range of extra fee is from 0 to 100
+- Fee: The transaction fee for transferring a token regardless of token amount. Please note that the token transaction fee of transferring a token will be transaction fee and extra fee.  For example, if the fee is set to 2, the extra fee rate is set to 1%. The total transaction fee when transferring 100 token X will be 2 + 1% * 100 = 3 token X, total token subtracted  from source account will be 100 token X, token owner receives 3 token X fee, target account receives 97 token X.
 - Lot: the minimum token amount to transfer in each transaction. It should be integer number with the range from 1 to 2^63 - 1
-- Conversion rate: The rate when users exchange UNW to token. This coversion rate is calculated by the number of token and number of UNW in Ginza unit. Please note that 1 UNW = 10^6 Ginza. For example: The *Token quantity = 1* and *Ginza quantity = 1000* (1 token for 0.001 UNW). If calling the exchange API with 10 UNW, users will get 10/0.001 = 10000 token. 
+- Conversion rate: The rate when users exchange UNW to token. This conversion rate is calculated by the number of token and number of UNW in Ginza unit. Please note that 1 UNW = 10^6 Ginza. For example: The *Token quantity = 1* and *Ginza quantity = 1000* (1 token for 0.001 UNW). If calling the exchange API with 10 UNW, users will get 10/0.001 = 10000 token. 
 - Fee pool: The initial fee pool for token. Minimum value is 10 UNW (enough for 37453 transactions at the moment) and everyone can always contribute a token fee pool later.
 - Description: the brief description of the token
 

@@ -18,7 +18,7 @@ Binary files located in build/libs folder.
 
 ## Run UniChain Local Node
 ### Config preparation
-You can create your own local UniChain blockchain network for testing or developing purposes. To create local network, some config must be changed. You can get the config file in *src/main/resouces/config.conf*. The following demostration the network with two witness nodes.
+You can create your own local UniChain blockchain network for testing or developing purposes. To create local network, some config must be changed. You can get the config file in *src/main/resources/config.conf*. The following demonstration the network with two witness nodes.
 - Config for witness 1 (config1.conf)
 ```
 ...
@@ -169,4 +169,4 @@ java -jar unichain-core -c ./config1.conf --witness -p e5a74cd1e72f2f67ec12af0e3
 java -jar unichain-core -c ./config2.conf --witness -p a86cb4c5ccaee3d598ceead01d33a58387f557b8b57447720cde44b584de5a70
 ``` 
 
-Network is up an running now. You can check the running logs at logs/unichain.log and start communicating with the network
+Network is up a running now. You can check the running logs at logs/unichain.log and start communicating with the network

@@ -542,7 +542,7 @@ function sign(unsignedTransaction, privateKey)
 ```
 
 ### Send raw transaction
-Broadcash signed transaction into network
+Broadcast signed transaction into network
 ```js
 function sendRawTransaction(signedTransaction)
 ```
@@ -571,7 +571,7 @@ Get account resource of an address
 function getAccountResources(address)
 ```
 
-### Get node infomation
+### Get node information
 Get node information
 ```js
 function getNodeInfo()

@@ -3,7 +3,7 @@ id: getStarted
 title: Config environment
 ---
 
-## Run UniChain Mainet Node
+## Run UniChain Mainnet Node
 ### Prepare environment and dependencies
 *Hardware requirement*
 - OS: Window, Mac, Ubuntu, Centos ... Linux base such as Ubuntu (version > 16.04) is better
@@ -12,7 +12,7 @@ title: Config environment
 - The following port should be allowed: 5525, 6636, 7749, 8864. For quick test, please allow all TCP ports
 
 *Dependency*
-- UniChain is based on Java and It needs the JDK 1.8 (from Oracle). The following commands are the quick steps for setting up JDK on Ubuntu server
+- UniChain is based on Java and needs the JDK 1.8 (from Oracle). The following commands are the quick steps for setting up JDK on Ubuntu server
 ```
 - mkdir $HOME/lib && cd $HOME/lib
 - wget https://developers.unichain.world/archives/jdk-8u202-linux-x64.tar.gz
@@ -25,7 +25,7 @@ java version "1.8.0_202"
 Java(TM) SE Runtime Environment (build 1.8.0_202-b08)
 Java HotSpot(TM) 64-Bit Server VM (build 25.202-b08, mixed mode)
 ```
-_Please note that, the above package is just for testing. Please go to [ocracle page](https://www.oracle.com) register, accept the terms and conditions and then download the right package according to your OS architecture_
+_Please note that, the above package is just for testing. Please go to [oracle page](https://www.oracle.com) register, accept the terms and conditions and then download the right package according to your OS architecture_
 
 ### Download UniChain node
 ```

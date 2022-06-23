@@ -17,7 +17,7 @@ kits to work with UniChain ecosystems are provided by us as
 well.
 
 ### UniChain use DPOS-HotStuff as the consensus algorithm
-Consensus is the heart of any Blockchain platform, The previous consensus algorithm such as PoW, PoA, POS ... do not meet the requirement of security and scalibility. 
+Consensus is the heart of any Blockchain platform, The previous consensus algorithm such as PoW, PoA, POS ... do not meet the requirement of security and scalability. 
 UniChain combine the DPOS and HotStuff consensus algorithm (we call It the DPOS-HotStuff). DPOS has been proved to be a good consensus algorithm which has been implemented in EOS, Bitshare ... while HotStuff is currently implement in Facebook Libra project. The combination of the two cutting-edge consensuses makes UniChain unique and more scalable
 
 ### UniChain use the multi-chain architecture
@@ -30,7 +30,7 @@ together.
 ![side chain architecture](../img/sideChain_architecture.png)
 
 Each side-chain has its own block- and transaction
-validators. Side-chains are independent from each other,
+validators. Side-chains are independent of each other,
 and have a separate ledger. Operations on chain X cannot
 UniChain - The Next Generation Blockchain For AI & Blockchain Economics
 - UniWorld.io Ecosystem

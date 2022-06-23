@@ -7,7 +7,7 @@ sidebar_label: Overview
 
 UniChain also referred to as multi-chain, is a highly scalable Blockchain platform interconnecting BCs to combine their assets (among other things) to scale and utilize otherwise idle potential to create a system greater than its parts.
 
-UniChain uses a DPOS-Hotstuff hybrid solution as the core consensus algorithm and the Uni-bridge protocol to communicate between Blockchains, i.e. cross-protocol for interchain communication.
+UniChain uses a DPOS-Hotstuff hybrid solution as the core consensus algorithm and the Uni-bridge protocol to communicate between Blockchains, i.e. cross-protocol for interchange communication.
 
 UniCoin (UNW) is UniChain’s native coin, but everyone can issue/ utilize their own native tokens on the UniChain system as well. Further specifications of UniChain:
 
@@ -18,7 +18,7 @@ UniCoin (UNW) is UniChain’s native coin, but everyone can issue/ utilize their
 - Total UNW supply (fixed): 1.000.000.000 (In words: one billion)
 - Block time: 1 - 3 seconds
 - Smart contract language: Solidity (compatible with Ethereum)
-- Inflation rate < 1% per year (may be zero or go negative, depending on transactions in the network)
+- Inflation rate < 1% per year (maybe zero or go negative, depending on transactions in the network)
 
 UniChain’s mainnet (version 1.0) launched on 04 June 2020.
 UniChain’s official website: [unichain.world](https://unichain.world)

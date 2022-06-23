@@ -10,7 +10,7 @@ To change any network parameter, an active witness must create a proposal and br
 
 
 ### Create a proposal
-Only witnesses can create proposals. To create a proposal, Witnesses can use use wallet cli or web interface provided by [Uni Validator](https://validator.unichain.world) 
+Only witnesses can create proposals. To create a proposal, Witnesses can use wallet cli or web interface provided by [Uni Validator](https://validator.unichain.world) 
 
 By Wallet CLI
 ```
@@ -19,7 +19,7 @@ wallet> CreateProposal 34 2
 The command to create a proposal: ```crewateProposal <proposal ID> <value>``` 
 Where the <proposal ID> can be found in the list below and <value> is the new proposal value
 
-To get all proposal, We an use this command: 
+To get all proposal, We use this command: 
 ```
 wallet> ListProposals
 {
@@ -49,7 +49,7 @@ wallet> ListProposals
 ]
 }
 ```
-The restructure will look like this: 
+The restructured will look like this: 
 
 ```
 "proposal_id": <network proposal ID>,
@@ -69,7 +69,7 @@ List of witnesses that approved
 ```
 
 ### Approve or reject a proposal
-Only witnesses can approve or reject a proposal. If use command line, witness can approve/reject a proposal by command: ```ApproveProposal <network proposal ID> <response> ```
+Only witnesses can approve or reject a proposal. If using command line, witness can approve/reject a proposal by command: ```ApproveProposal <network proposal ID> <response> ```
 
 Where the _<network proposal ID>_ is the network proposal ID, It’s different from proposal ID. Wherever a witness broadcasts a proposal into the network, the network proposal ID will be created (It’s integer number and increased by time). The _<response>_ can be _true_ or _false_. If true, the proposal is approved, otherwise It will be rejected by witnesses.
 Example: 

@@ -29,7 +29,7 @@ _Create signature_
 - Convert the raw data (transaction in JSON format for example) to byte array
 - Calculate the hash from byte raw data using the SHA256 ```hash = SHA256(rawDataInByteArray)```
 - Use private key to sign on the hash ```result = sign(hash, privateKey)```
-- The signature maybe added to the tranasction as the extra data
+- The signature maybe added to the transaction as the extra data
 
 _Verify signature_
 The *result* returned from the *sign* function contains the value of *{s, r, v}*. *s* (32 bytes in length) is the signature proof, *r* (32 bytes in length) is the signature result, *v* is the public key recovery. To verify the signature, We calculate the r' from the signing message (the hash of raw data), the signature proof (*s*) ad the public key recovery (*v*). If `r' = r` then the signature is valid, otherwise It is invalid.
@@ -50,7 +50,7 @@ The utility functions below will generate the address from your private key. You
 </div>
 <script src="../js/UnichainJS.js"></script>
 <script type="text/javascript">
-    function randomeHex () {
+    function randomHex () {
         const hexChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
         const min = 0, max = hexChar.length - 1
         let key = ''
@@ -73,7 +73,7 @@ The utility functions below will generate the address from your private key. You
             }
         }
         if (!privateKey) {
-            privateKey = randomeHex()
+            privateKey = randomHex()
             document.getElementById("privateKey").value = privateKey
         }
         document.getElementById("address").value = UnichainJS.address.fromPrivateKey(privateKey)

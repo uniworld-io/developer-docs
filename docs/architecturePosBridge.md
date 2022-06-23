@@ -7,7 +7,7 @@ sidebar_label: Architecture PosBridge
 
 ## Smart contract language
 
-UniChain uses Solidity as the primary smart contract language. Other languages such as NodeJS or Java will be implement in the future. The smart contracts written in UniChain are quite compatible with Ethereum network so that the migration from Ethereum to UniChain is very simple.
+UniChain uses Solidity as the primary smart contract language. Other languages such as NodeJS or Java will be implemented in the future. The smart contracts written in UniChain are quite compatible with Ethereum network so that the migration from Ethereum to UniChain is very simple.
 
 ## Your first smart contract
 
@@ -55,7 +55,7 @@ contract YourCoin {
 
 ```
 
-The *ConvertLib.sol* is defined in another file, It's just have only simple funcion but you can define any function in the separated file like this.
+The *ConvertLib.sol* is defined in another file, It's just have only simple function, but you can define any function in the separated file like this.
 
 ```javascript
 //convert lib 

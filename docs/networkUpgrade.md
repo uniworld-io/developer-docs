@@ -8,7 +8,7 @@ sidebar_label: Network Upgrade
 Normally, UniChain development team will release a new software version every month or quarter. New software versions will add new features, fix bugs and create a stable version.
 When a new version is released, there may be many software packages released accordingly such as _blockchain node_, _wallet cli_, _unichain-js_, … 
 
-UniChain team will make announcements on social media whenever a new software is released with the detailed changelog and the packages can be download from [github repos](https://github.com/uniworld-io/unichain-core/releases)
+UniChain team will make announcements on social media whenever a new software is released with the detailed changelog and the packages can be downloaded from [github repos](https://github.com/uniworld-io/unichain-core/releases)
 
 In most cases, users can download the packages (Unichain node) and replace the old version to update the software. But in some cases the change may affect the genesis information, ledger state, network configuration … and the _hardfork_ is needed.
 
