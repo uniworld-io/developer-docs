@@ -596,3 +596,15 @@ h2 {
 .u_half {
     width: 50%;
 }
+
+.u_warning {
+  color: lightcoral;
+  font-weight: bold;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.u_warning img {
+  display: inline-block;
+  max-height: 50px;
+}

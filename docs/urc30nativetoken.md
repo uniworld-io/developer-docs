@@ -4,6 +4,10 @@ title: URC-30 Native Token
 sidebar_label: URC-30 Native Token
 ---
 
+<div  class="u_warning">
+<span><img src="../img/icon/warning-icon.png" /></span>
+<span>From block version 5, the native URC-30 token is migrated to native URC-20 token!</span>
+</div>
 URC-30 Native token is the native token on UniChain network. It has the same function as the URC-20 token but the big difference is that It is not based on smart contracts. Users can interact with the token by using APIs from blockchain nodes. Unlike URC-20 token, transferring URC-30 Native token does not require UNW as the transaction fee (gas). Instead, the transaction fee is from the token itself.
 The following picture describes how the transaction fee model in URC-30 works.
 
