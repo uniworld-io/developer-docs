@@ -75,15 +75,15 @@ class HomeSplash extends React.Component {
         </div>
         <div className="unw-news">
           <div className="wrapper">
-            <h2>Popular eveloper Blog Posts</h2>
+            <h2>Popular Blog Posts</h2>
             <div className="x-row cards-3">
-              <a href="https://medium.com/uniworld-io/unichain-for-decentralized-finance-dc016ca50937" target="_blank" className="x-card ">
+              <a href="https://developers.unichain.world/blog/2022/06/28/UniChain-key-features" target="_blank" className="x-card ">
                   <figure className="x-card-top">
-                      <div style={{ backgroundImage: `url(/img/unichain-defi.png)` }}></div>
+                      <div style={{ backgroundImage: `url(/img/blog/urc30_token_fee.png)` }}></div>
                   </figure>
                   <div className="x-card-body">
-                      <h5>UniChain for Decentralized Finance</h5>
-                      <p>Decentralized Finance or Defi is a movement of the financial sector that leverage decentralized technologies, particularly blockchain networks</p>
+                      <h5>The UniChain's unique features</h5>
+                      <p>Unichain is a layer-1 blockchain platform focusing on smart society 5.0, web3 and metaverse. UniChain combines many current advanced technologies from various blockchain platforms and has launched mainnet since June 2020. The following features are really hard to find in other blockchain platforms.</p>
                       <div className="btn-text-arrow-black">
                           <span>Read more</span>
                       </div>
