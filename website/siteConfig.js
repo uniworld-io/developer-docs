@@ -39,6 +39,7 @@ const siteConfig = {
         { doc: 'welcome', label: 'Docs' },
         { doc: 'fullNodeAPI', label: 'API' },
         { doc: 'tutorials/tutorials', label: 'Tutorial' },
+        { blog: 'blog', label: 'Blog' },
         { doc: 'help', label: 'Help' }
     ],
 
