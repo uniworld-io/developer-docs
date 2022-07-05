@@ -39,7 +39,7 @@ The data structure of each block will have the following format:
 Where:
 - __blockID__: is the block hash
 - __block_header__: contains the *raw_data* (block number, witness address, tx root, parent hash, time stamp ...) *and witness_signature* who produces the block
-- __transactions__: the list of transaction in the block. Each transaction has the brief information that will be descripted below.
+- __transactions__: the list of transaction in the block. Each transaction has the brief information that will be described below.
 
 You can get the block by calling the [full node API](./docs/fullNodeAPI) 
 ```
