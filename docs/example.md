@@ -75,8 +75,8 @@ const sendCoin = async (fromAddress, toAddress, amount) => {
       amount: parseInt(amount) 
   }
   let unsingedTx = await unichain.currentProviders().fullNode.request('wallet/createtransaction', data, 'post')
-  let signedTx = await unichain.unx.signTransaction(unsingedTx, privateKey, 0)
-  let res = await unichain.unx.sendRawTransaction(signedTx)
+  let signedTx = await unichain.api.signTransaction(unsingedTx, privateKey, 0)
+  let res = await unichain.api.sendRawTransaction(signedTx)
   return res
 }
 
@@ -120,7 +120,7 @@ Result should look like this
 __Get transaction by txid__
 ```js
 const txid = '232176ccd94b079bbc1afe8687f656a2708ee29e4aea254699f0323bbb8ab530'
-unichain.unx.getTransaction(txid, (err, tx) => {
+unichain.api.getTransaction(txid, (err, tx) => {
     console.log(tx)
 })
 ```
@@ -164,7 +164,7 @@ __Get account information including balance and other resources, permissions__
 ```js
 //Get account information, can use async/await style
 const accountAddress = 'UZ1XxkZEQru4dJjjQfxVMG42SGSxpPrhRu'
-unichain.unx.getAccount(accountAddress)
+unichain.api.getAccount(accountAddress)
 .then(account => {
     console.log('account information: ', account)})
 .catch(err => {
@@ -197,7 +197,7 @@ Result:
 ### Example for exchange or explorer
 __Get current block__
 ```js
-unichain.unx.getCurrentBlock()
+unichain.api.getCurrentBlock()
 .then(block => console.log('current block: ', block))
 .catch(err => console.log(err))
 ```
@@ -222,7 +222,7 @@ Result:
 
 __Get block detail by number (or hash)__
 ```js
-unichain.unx.getBlockByNumber(3981329)
+unichain.api.getBlockByNumber(3981329)
 .then(block => console.log('block detail: ', block))
 .catch(err => console.log(err))
 ```
@@ -258,7 +258,7 @@ __Get transaction detail in block__
 ```js
 //extract transfer transaction in block | crawl data
 let transactionInfo = []
-unichain.unx.getBlockByNumber(3981556)
+unichain.api.getBlockByNumber(3981556)
 .then(block => {
     const transactions = block.transactions
     if (transactions.length <= 0) return
