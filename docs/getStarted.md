@@ -81,3 +81,8 @@ If you are witness, run unichain node with --witness and -p options (-p: witness
 java -jar unichain-core.jar --witness -p your_witness_private_key
 java -jar unichain-core.jar --witness -p f06f6fbea136162c1bfac04869ff94331ca2a9861f737e4b05b56527b0b8bf46
 ```
+
+### Sync data from snapshot
+When running a new UniChain node, the sync process may take a long time (up to days depending on the hardware and network condition). To save time, We can download the existing data and let the nodes sync data from the snapshot.
+Please follow [this link](https://download.unichain.world) to get the snapshot data and instruction
+

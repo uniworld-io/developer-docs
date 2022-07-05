@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>UniChain - Download Page</title>
+</head>
+
+<body>
+    <div style="margin-top: 20px;margin-left: 20%;width: 60%;">
+        <h1></h1>
+        <h2>Data snapshot</h2>
+        <h3>Snapshot October 5th, 2022</h3>
+        <p>UniChain Core Node: <a
+                href="/data/unichain-node-v5-2022-07-05-20106883.zip">unichain-node-v5-2022-07-05-20106883.zip</a>
+            (md5:f630e9e54bb4b9fcc81d2d52d99d9500)</p>
+
+        <h3>Snapshot October 25th, 2021</h3>
+        <p>UniChain Core Node: <a
+                href="/data/unichain-node-v1-2021-10-25-13102150.zip">unichain-node-v1-2021-10-25-13102150.zip</a>
+            (md5:3d08fefa38bac22de6a62127ca79d39d)</p>
+        <p>UniChain Relay Node: <a
+                href="/data/unichain-relay-v1-2021-10-25-13102127.zip">unichain-relay-v1-2021-10-25-13102127.zip</a>
+            (md5:980aee45fe4dc515fac766f8c7ad7410)</p>
+
+        <p><b>Please check MD5 of the file by running the command below</b></p>
+        <div style="font-family: courier; font-style: italic;background-color: lightgrey;padding: 10px;">
+            <p>openssl md5 file_name </p>
+            <p>openssl md5 unichain-node-v5-2022-07-05-20106883.zip</p>
+            <p>MD5(unichain-node-v5-2022-07-05-20106883.zip)= f630e9e54bb4b9fcc81d2d52d99d9500</p>
+        </div>
+        <h2>Software</h2>
+        <p> Download UniChain core, relay node and Wallet CLI from <a href="https://github.com/uniworld-io/unichain-core/releases">Release software</a>
+        </p>
+        
+        <h2>Quick guide</h2>
+        <p>Quick guide to run node and sync with snapshot data on linux</p>
+        <div style="font-family: courier; font-style: italic;background-color: lightgrey;padding: 10px;">
+            <p>> mkdir node</p>
+            <p>> cd node</p>
+            <p>> wget https://github.com/uniworld-io/unichain-core/releases/download/[version]/unichain-core.jar</p>
+            <p> Download the newest snapshot data above, unzip and move the <b>unichain</b> folder to the <b>node</b> folder created above</p>
+            <p> Folder structure should look like below</p>
+            <p> + node</p>
+            <p> &nbsp; unichain-core.jar</p>
+            <p> &nbsp; + unichain</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; + database</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; + index</p>
+            <p> Then run the following command</p>
+            <p>> java -jar unichain-core.jar</p>
+        </div>
+    </div>
+</body>
