@@ -556,7 +556,7 @@ h2 {
     vertical-align: middle;
     border: transparent;
     border-radius: 5px;
-    font-size: 80%;
+    font-size: 90%;
     padding: .5em 1em;
     text-decoration: none;
 }
@@ -596,7 +596,16 @@ h2 {
 .u_half {
     width: 50%;
 }
-
+.u_center {
+  margin: auto;
+  text-align: center;
+}
+.u_margin_top_10 {
+  margin-top: 10px;
+}
+.u_margin_botton_10 {
+  margin-bottom: 10px;
+}
 .u_warning {
   color: lightcoral;
   font-weight: bold;

@@ -36,17 +36,17 @@ The *result* returned from the *sign* function contains the value of *{s, r, v}*
 
 ### Generate address 
 The utility functions below will generate the address from your private key. You can either choose the random private key or input your own. __Please note that these functions are executed from the client side, No one can access the private key except you__. 
-<div>
-    <input id="privateKey" style="width:95%;height:30px;margin-top:10px" placeholder=" private key. If empty, the random private key will be generated"></input>
-    <input id="address" style="width:95%;height:30px;margin-top:10px" placeholder=" generated address" disabled></input>
-    <input type="button" style="width:20%;margin-left:40%;height:30px;margin-top:10px" onClick="generateAddress()" value="Generate Address"></input>
+<div class="u_center">
+    <input id="privateKey" class="u_input u_full" placeholder=" private key. If empty, the random private key will be generated"></input>
+    <input id="address" class="u_input u_full" placeholder=" generated address" disabled></input>
+    <input type="button" class="u_button u_button_primary u_margin_top_10" onClick="generateAddress()" value="Generate Address"></input>
 </div>
 
 ### Convert address to hex and vice versa 
-<div>
-    <input id="sourceAddress" style="width:95%;height:30px;margin-top:10px" placeholder="Enter your address (Hex or Base58 format)"></input>
-    <input id="destinationAddress" style="width:95%;height:30px;margin-top:10px" placeholder=" Converted address" disabled></input>
-    <input type="button" style="width:20%;margin-left:40%;height:30px;margin-top:10px" onClick="convertAddress()" value="Convert Address"></input>
+<div class="u_center">
+    <input id="sourceAddress" class="u_input u_full" placeholder="Enter your address (Hex or Base58 format)"></input>
+    <input id="destinationAddress" class="u_input u_full" placeholder=" Converted address" disabled></input>
+    <input type="button" class="u_button u_button_primary u_margin_top_10" onClick="convertAddress()" value="Convert Address"></input>
 </div>
 <script src="../js/UnichainJS.js"></script>
 <script type="text/javascript">
