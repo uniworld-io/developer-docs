@@ -55,6 +55,18 @@ const block = await unichain.api.getBlockByNumber(blockNumber)
 console.log('Block data:', block)
 ```
 
+#### Try It yourself
+<div class="u_center">
+<input id="blockID" class="u_input u_full" placeholder=" Input block ID or block hash" ></input>
+<p id="blockError" style="color:red"></p>
+<div>
+<textarea id="blockRes" style="visibility: hidden; width: 100%;margin-top:5px;padding:5px" disabled>
+</textarea>
+</div>
+<input type="button" class="u_button u_button_primary u_margin_top_10" onClick="getBlock()" value="Get Block Info"></input>
+</div>
+
+
 ### Transaction format
 The transaction will have the following structure:
 ```js
@@ -114,9 +126,71 @@ Please note that the transaction and block will be finalized after ⅔ of the wi
 curl -X POST  http://{host}/walletsolidity/gettransactionbyid -d '{"value": "transaction_hash"}'
 ```
 
+#### Try It yourself
+<div class="u_center">
+<input id="txid" class="u_input u_full" placeholder=" Input transaction ID" ></input>
+<p id="txError" style="color:red"></p>
+<div>
+<textarea id="txRes" style="visibility: hidden; width: 100%;margin-top:5px;padding:5px" disabled>
+</textarea>
+</div>
+<input type="button" class="u_button u_button_primary u_margin_top_10" onClick="getTx()" value="Get Transaction Info"></input>
+</div>
+
 ### Related resources:
 - [How to run UniChain node](./getStarted)
 - [How to use UniChainJS library](./docs/tutorials/tutorial-002)
 
 
-
+<script type="text/javascript">
+function isNumeric(value) {
+    return /^-?\d+$/.test(value);
+}
+function isHex (hexString) {
+        const re = /[0-9A-Fa-f]{64}/g
+        return re.test(hexString)
+}
+function getBlock() {
+    const blockId = document.getElementById("blockID").value 
+    //TODO: validate 
+    let url = 'https://seed-1.unichain.world/wallet/'
+    let data = {}
+    console.log(blockId)
+    if (isNumeric(blockId)) {
+        url += 'getblockbynum'
+        data = {num: parseInt(blockId)}
+    } else if (isHex(blockId)) { //check hex string
+        url += 'getblockbyid'
+        data = {value: blockId}
+    } else {
+        document.getElementById("blockError").innerHTML = 'Invalid block ID or block hash'
+        return
+    }
+    axios.post(url, data).then(res => {
+        console.log(res.data)
+        document.getElementById("blockRes").innerHTML = JSON.stringify(res.data)
+        document.getElementById("blockRes").rows = 10
+        document.getElementById("blockRes").style.visibility = 'visible'
+    }).catch(err => {
+        document.getElementById("blockError").innerHTML = JSON.stringify(err)
+    })
+}
+function getTx() {
+    const txid = document.getElementById("txid").value 
+    let url = 'https://seed-1.unichain.world/wallet/gettransactionbyid'
+    console.log(txid)
+    if (txid.length != 64 || !isHex(txid)) {
+        document.getElementById("txError").innerHTML = 'Invalid transaction hash'
+        return
+    }
+    axios.post(url, {value: txid}).then(res => {
+        console.log(res.data)
+        document.getElementById("txRes").innerHTML = JSON.stringify(res.data)
+        document.getElementById("txRes").rows = 10
+        document.getElementById("txRes").style.visibility = 'visible'
+    }).catch(err => {
+        console.log(err)
+        document.getElementById("txError").innerHTML = JSON.stringify(err)
+    })
+}
+</script>
