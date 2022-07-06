@@ -48,7 +48,6 @@ The utility functions below will generate the address from your private key. You
     <input id="destinationAddress" class="u_input u_full" placeholder=" Converted address" disabled></input>
     <input type="button" class="u_button u_button_primary u_margin_top_10" onClick="convertAddress()" value="Convert Address"></input>
 </div>
-<script src="../js/UnichainJS.js"></script>
 <script type="text/javascript">
     function randomHex () {
         const hexChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']

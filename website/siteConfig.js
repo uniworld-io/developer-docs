@@ -84,7 +84,8 @@ const siteConfig = {
               'https://code.jquery.com/jquery-3.5.1.min.js', 
               'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js',
               '/js/demo.js',
-              '/js/custom.js'
+              '/js/custom.js',
+              'https://cdn.jsdelivr.net/npm/@uniworld/unichain-js@1.0.9/dist/UnichainJS.js'
             ],
     stylesheets: ['/css/custom.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'],
 
